@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Cartão base, mesmo tratamento da opção escolhida -->
+  <rect x="0.75" y="0.75" width="30.5" height="30.5" rx="7.5" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+
+  <!-- Lente da lupa -->
+  <circle cx="13" cy="13" r="8" fill="none" stroke="#111827" stroke-width="2.3"/>
+
+  <!-- Cabo da lupa -->
+  <line x1="18.7" y1="18.7" x2="24.3" y2="24.3" stroke="#111827" stroke-width="2.3" stroke-linecap="round"/>
+
+  <!-- Monograma dentro da lente -->
+  <text x="13" y="16.3" text-anchor="middle"
+        font-family="Helvetica Neue, Arial, sans-serif" font-weight="700"
+        font-size="8.2" letter-spacing="-0.3" fill="#2563EB">PS</text>
+</svg>
