@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pedro Silva | Technical SEO & AI Search Consultant</title>
+<meta name="description" content="Consultoria de SEO Técnico e AI Search (GEO). Auditorias técnicas, Core Web Vitals, Schema Markup, hreflang e otimização para Google AI Overviews e ChatGPT Search.">
+<meta name="author" content="Pedro Silva">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Pedro Silva | Technical SEO & AI Search Consultant">
+<meta property="og:description" content="Ajudo empresas a resolver problemas técnicos de SEO e a preparar os seus websites para a nova geração da pesquisa com Inteligência Artificial.">
+<meta property="og:url" content="https://pedrosilva.pt/">
+<meta property="og:image" content="https://pedrosilva.pt/og-image.jpg">
+<meta property="og:locale" content="pt_PT">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Pedro Silva | Technical SEO & AI Search Consultant">
+<meta name="twitter:description" content="SEO Técnico e AI Search para empresas que querem crescer.">
+
+<link rel="canonical" href="https://pedrosilva.pt/">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<!-- JSON-LD: Person / ProfessionalService -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Pedro Silva",
+  "jobTitle": "Technical SEO & AI Search Consultant",
+  "url": "https://pedrosilva.pt/",
+  "knowsAbout": ["Technical SEO", "AI Search Optimization", "Generative Engine Optimization", "International SEO", "Core Web Vitals", "Schema Markup"],
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Pedro Silva Consulting"
+  }
+}
+</script>
+
+<!-- JSON-LD: FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Quanto tempo demora uma auditoria técnica de SEO?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Depende da dimensão do website, mas a maioria das auditorias fica concluída entre 2 a 4 semanas, incluindo diagnóstico, análise e entrega do roadmap de prioridades." }
+    },
+    {
+      "@type": "Question",
+      "name": "Trabalhas com empresas fora de Portugal?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Sim. Tenho experiência com projetos internacionais em mais de 50 mercados e trabalho remotamente com equipas em qualquer fuso horário." }
+    },
+    {
+      "@type": "Question",
+      "name": "O que é AI Search e porque é importante?",
+      "acceptedAnswer": { "@type": "Answer", "text": "AI Search refere-se à forma como motores baseados em Inteligência Artificial, como o Google AI Overviews, o ChatGPT Search e o Gemini, encontram e apresentam informação. Preparar um website para este ecossistema é cada vez mais importante para manter visibilidade." }
+    },
+    {
+      "@type": "Question",
+      "name": "Como funciona o processo de implementação?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Depois da auditoria e do roadmap de prioridades, acompanho diretamente a equipa técnica ou de desenvolvimento na implementação, com sessões de validação e monitorização contínua dos resultados." }
+    },
+    {
+      "@type": "Question",
+      "name": "Trabalhas com que tipo de websites ou CMS?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Trabalho com qualquer stack técnico, incluindo websites em WordPress, Shopify, plataformas headless e aplicações JavaScript (React, Vue, Next.js), com especial foco em SEO técnico para frameworks modernos." }
+    },
+    {
+      "@type": "Question",
+      "name": "Qual é o primeiro passo para começar?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Uma conversa inicial gratuita, onde percebo o contexto do negócio e faço uma primeira análise às principais oportunidades técnicas do website." }
+    }
+  ]
+}
+</script>
+
+<style>
+  :root{
+    --bg:#FFFFFF;
+    --bg-secondary:#F8FAFC;
+    --text:#111827;
+    --text-muted:#64748B;
+    --blue:#2563EB;
+    --blue-dark:#1D4ED8;
+    --blue-tint:#EFF4FE;
+    --border:#E5E9F0;
+    --red:#DC2626;
+    --amber:#D97706;
+    --radius:12px;
+    --radius-lg:20px;
+    --shadow:0 1px 2px rgba(17,24,39,.04), 0 8px 24px -12px rgba(17,24,39,.08);
+    --shadow-lg:0 4px 8px rgba(17,24,39,.04), 0 24px 48px -16px rgba(17,24,39,.14);
+    --ease:cubic-bezier(.16,1,.3,1);
+  }
+
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important;}
+  }
+
+  body{
+    font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+    color:var(--text);
+    background:var(--bg);
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+    font-feature-settings:"ss01" 1, "cv11" 1;
+  }
+
+  .mono{ font-family:'JetBrains Mono', ui-monospace, monospace; }
+
+  img{max-width:100%; display:block;}
+  a{color:inherit; text-decoration:none;}
+  ul{list-style:none;}
+  button{font-family:inherit; cursor:pointer;}
+
+  .container{max-width:1120px; margin:0 auto; padding:0 24px;}
+
+  h1,h2,h3{font-weight:800; letter-spacing:-0.02em; line-height:1.1;}
+  h1{font-size:clamp(2.25rem, 4.5vw + 1rem, 3.5rem);}
+  h2{font-size:clamp(1.75rem, 2.6vw + 1rem, 2.5rem);}
+  h3{font-size:clamp(1.25rem, 1vw + 1rem, 1.75rem); font-weight:700;}
+  p{font-size:1.0625rem; color:var(--text-muted);}
+
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:8px;
+    font-size:.8125rem; font-weight:600; letter-spacing:.02em;
+    color:var(--blue); text-transform:uppercase;
+    margin-bottom:16px;
+  }
+  .eyebrow::before{content:""; width:6px; height:6px; border-radius:50%; background:var(--blue); display:inline-block;}
+
+  .section-head{max-width:640px; margin-bottom:56px;}
+  .section-head.center{margin-left:auto; margin-right:auto; text-align:center;}
+  .section-head h2{margin-bottom:14px;}
+  .section-head p{font-size:1.0625rem;}
+
+  section{padding:112px 0;}
+  @media (max-width:768px){ section{padding:72px 0;} }
+
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center; gap:8px;
+    padding:14px 24px; border-radius:10px;
+    font-size:.9375rem; font-weight:600;
+    border:1px solid transparent;
+    transition:transform .2s var(--ease), box-shadow .2s var(--ease), background .2s var(--ease), border-color .2s var(--ease);
+    white-space:nowrap;
+  }
+  .btn-primary{ background:var(--blue); color:#fff; box-shadow:0 1px 2px rgba(37,99,235,.1), 0 8px 20px -8px rgba(37,99,235,.5);}
+  .btn-primary:hover{ background:var(--blue-dark); transform:translateY(-1px); box-shadow:0 1px 2px rgba(37,99,235,.15), 0 14px 28px -10px rgba(37,99,235,.55);}
+  .btn-secondary{ background:#fff; color:var(--text); border-color:var(--border);}
+  .btn-secondary:hover{ border-color:#CBD5E1; transform:translateY(-1px); box-shadow:var(--shadow);}
+  .btn-group{ display:flex; gap:12px; flex-wrap:wrap; }
+
+  /* ===== Reveal on scroll ===== */
+  .reveal{ opacity:0; transform:translateY(18px); transition:opacity .7s var(--ease), transform .7s var(--ease); }
+  .reveal.in{ opacity:1; transform:none; }
+  .reveal-group .reveal:nth-child(1){transition-delay:.02s;}
+  .reveal-group .reveal:nth-child(2){transition-delay:.08s;}
+  .reveal-group .reveal:nth-child(3){transition-delay:.14s;}
+  .reveal-group .reveal:nth-child(4){transition-delay:.2s;}
+  .reveal-group .reveal:nth-child(5){transition-delay:.26s;}
+  .reveal-group .reveal:nth-child(6){transition-delay:.32s;}
+  .reveal-group .reveal:nth-child(7){transition-delay:.38s;}
+  .reveal-group .reveal:nth-child(8){transition-delay:.44s;}
+
+  /* ===== Header ===== */
+  header{
+    position:fixed; top:0; left:0; right:0; z-index:100;
+    background:rgba(255,255,255,.7);
+    backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px);
+    border-bottom:1px solid transparent;
+    transition:border-color .3s var(--ease), background .3s var(--ease);
+  }
+  header.scrolled{ border-bottom-color:var(--border); background:rgba(255,255,255,.85); }
+  .nav{ display:flex; align-items:center; justify-content:space-between; height:72px; }
+  .brand{ display:flex; flex-direction:column; line-height:1.15; }
+  .brand strong{ font-size:1rem; font-weight:700; letter-spacing:-0.01em; }
+  .brand span{ font-size:.75rem; color:var(--text-muted); }
+  .nav-links{ display:flex; align-items:center; gap:36px; }
+  .nav-links a{ font-size:.9375rem; font-weight:500; color:var(--text-muted); transition:color .2s var(--ease); }
+  .nav-links a:hover{ color:var(--text); }
+  .nav-cta{ display:flex; align-items:center; gap:16px; }
+  .nav-toggle{ display:none; background:none; border:none; padding:8px; }
+  .nav-toggle svg{ width:22px; height:22px; }
+
+  @media (max-width:860px){
+    .nav-links{
+      position:absolute; top:72px; left:0; right:0;
+      background:#fff; border-bottom:1px solid var(--border);
+      flex-direction:column; align-items:flex-start; gap:0;
+      max-height:0; overflow:hidden; opacity:0;
+      transition:max-height .35s var(--ease), opacity .3s var(--ease);
+    }
+    .nav-links.open{ max-height:340px; opacity:1; }
+    .nav-links a{ padding:16px 24px; width:100%; border-bottom:1px solid var(--border); }
+    .nav-toggle{ display:block; }
+    .nav-cta .btn-primary{ padding:10px 16px; font-size:.875rem; }
+  }
+
+  /* ===== Hero ===== */
+  .hero{ padding:180px 0 100px; overflow:hidden; }
+  .hero-grid{ display:grid; grid-template-columns:1.05fr .95fr; gap:64px; align-items:center; }
+  @media (max-width:960px){ .hero-grid{ grid-template-columns:1fr; gap:56px; } .hero{ padding:140px 0 64px; } }
+
+  .badge-pill{
+    display:inline-flex; align-items:center; gap:8px;
+    padding:6px 14px; border-radius:999px; border:1px solid var(--border);
+    font-size:.8125rem; font-weight:500; color:var(--text-muted); margin-bottom:24px;
+    background:var(--bg-secondary);
+  }
+  .badge-dot{ width:7px; height:7px; border-radius:50%; background:#16A34A; box-shadow:0 0 0 3px rgba(22,163,74,.15); }
+
+  .hero h1{ margin-bottom:20px; }
+  .hero p.lead{ font-size:1.125rem; max-width:520px; margin-bottom:36px; }
+
+  .stats-inline{ display:flex; gap:40px; margin-top:56px; flex-wrap:wrap; }
+  .stat-item strong{ display:block; font-size:1.75rem; font-weight:800; letter-spacing:-.01em; }
+  .stat-item span{ font-size:.875rem; color:var(--text-muted); }
+
+  /* ===== Hero terminal ===== */
+  .terminal{
+    background:#0B1120; border-radius:var(--radius-lg);
+    box-shadow:var(--shadow-lg);
+    overflow:hidden; border:1px solid #1E293B;
+  }
+  .terminal-bar{ display:flex; align-items:center; gap:8px; padding:14px 18px; border-bottom:1px solid #1E293B; }
+  .terminal-bar span{ width:11px; height:11px; border-radius:50%; }
+  .terminal-bar span:nth-child(1){ background:#FF5F57; }
+  .terminal-bar span:nth-child(2){ background:#FEBC2E; }
+  .terminal-bar span:nth-child(3){ background:#28C840; }
+  .terminal-title{ margin-left:8px; font-size:.75rem; color:#64748B; }
+  .terminal-body{ padding:22px 20px; font-size:.875rem; min-height:250px; }
+  .term-line{ opacity:0; transform:translateY(4px); animation:termIn .4s var(--ease) forwards; display:flex; gap:10px; padding:5px 0; color:#CBD5E1; }
+  .term-line .sym{ color:#475569; flex-shrink:0; }
+  .term-line.ok .sym{ color:#34D399; }
+  .term-line.warn .sym{ color:#FBBF24; }
+  .term-line .dim{ color:#64748B; }
+  @keyframes termIn{ to{ opacity:1; transform:none; } }
+  .term-cursor{ display:inline-block; width:7px; height:15px; background:#2563EB; margin-left:2px; vertical-align:middle; animation:blink 1s step-end infinite; }
+  @keyframes blink{ 50%{ opacity:0; } }
+
+  /* ===== Services ===== */
+  .services-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:20px; }
+  @media (max-width:768px){ .services-grid{ grid-template-columns:1fr; } }
+  .service-card{
+    border:1px solid var(--border); border-radius:var(--radius-lg);
+    padding:32px; background:#fff;
+    transition:border-color .25s var(--ease), box-shadow .25s var(--ease), transform .25s var(--ease);
+  }
+  .service-card:hover{ border-color:#CBD5E1; box-shadow:var(--shadow-lg); transform:translateY(-3px); }
+  .service-icon{
+    width:44px; height:44px; border-radius:10px; background:var(--blue-tint);
+    display:flex; align-items:center; justify-content:center; margin-bottom:20px;
+  }
+  .service-icon svg{ width:22px; height:22px; stroke:var(--blue); }
+  .service-card h3{ margin-bottom:10px; }
+  .service-card p{ font-size:.9375rem; margin-bottom:20px; }
+  .chip-row{ display:flex; flex-wrap:wrap; gap:8px; }
+  .chip{ font-size:.8125rem; padding:5px 11px; border-radius:999px; background:var(--bg-secondary); color:var(--text-muted); border:1px solid var(--border); }
+
+  /* ===== Problems ===== */
+  .problems-grid{ display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--border); border:1px solid var(--border); border-radius:var(--radius-lg); overflow:hidden; }
+  @media (max-width:700px){ .problems-grid{ grid-template-columns:1fr; } }
+  .problem-item{ display:flex; align-items:center; gap:14px; padding:22px 26px; background:#fff; font-size:.9375rem; font-weight:500; }
+  .problem-item svg{ width:20px; height:20px; stroke:var(--red); flex-shrink:0; }
+
+  /* ===== Process ===== */
+  .process-list{ display:grid; grid-template-columns:repeat(5,1fr); gap:20px; }
+  @media (max-width:960px){ .process-list{ grid-template-columns:1fr 1fr; } }
+  @media (max-width:560px){ .process-list{ grid-template-columns:1fr; } }
+  .process-step{ padding-top:20px; border-top:2px solid var(--border); }
+  .process-step .num{ font-family:'JetBrains Mono',monospace; font-size:.8125rem; color:var(--blue); font-weight:600; display:block; margin-bottom:14px; }
+  .process-step h3{ font-size:1.0625rem; margin-bottom:8px; }
+  .process-step p{ font-size:.875rem; }
+
+  /* ===== Audit flow diagram ===== */
+  .flow{ margin-top:80px; }
+  .flow-track{ display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:0; }
+  .flow-node{
+    display:flex; flex-direction:column; align-items:center; gap:10px;
+    flex:1 1 0; min-width:110px; text-align:center;
+  }
+  .flow-node .dot{
+    width:52px; height:52px; border-radius:50%; background:#fff; border:2px solid var(--border);
+    display:flex; align-items:center; justify-content:center;
+    transition:border-color .3s var(--ease), background .3s var(--ease);
+  }
+  .flow-node.on .dot{ border-color:var(--blue); background:var(--blue-tint); }
+  .flow-node .dot svg{ width:22px; height:22px; stroke:var(--text-muted); transition:stroke .3s var(--ease); }
+  .flow-node.on .dot svg{ stroke:var(--blue); }
+  .flow-node span.label{ font-size:.8125rem; font-weight:600; color:var(--text-muted); transition:color .3s var(--ease); }
+  .flow-node.on span.label{ color:var(--text); }
+  .flow-arrow{ flex:0 0 auto; width:40px; height:1px; background:var(--border); position:relative; top:-22px; }
+  @media (max-width:860px){
+    .flow-track{ flex-direction:column; align-items:flex-start; gap:22px; }
+    .flow-node{ flex-direction:row; text-align:left; min-width:0; }
+    .flow-arrow{ display:none; }
+  }
+
+  /* ===== Audit example ===== */
+  .audit-card{
+    border:1px solid var(--border); border-radius:var(--radius-lg); background:#fff;
+    box-shadow:var(--shadow-lg); overflow:hidden;
+  }
+  .audit-card-head{ display:flex; align-items:center; justify-content:space-between; padding:22px 28px; border-bottom:1px solid var(--border); background:var(--bg-secondary); flex-wrap:wrap; gap:10px; }
+  .audit-card-head strong{ font-size:.9375rem; }
+  .fictional-badge{ font-size:.75rem; font-weight:600; color:var(--text-muted); background:#fff; border:1px solid var(--border); padding:4px 10px; border-radius:999px; }
+  .audit-card-body{ display:grid; grid-template-columns:.9fr 1.1fr; gap:0; }
+  @media (max-width:800px){ .audit-card-body{ grid-template-columns:1fr; } }
+  .audit-score{ display:flex; flex-direction:column; align-items:center; justify-content:center; padding:44px 28px; border-right:1px solid var(--border); text-align:center; }
+  @media (max-width:800px){ .audit-score{ border-right:none; border-bottom:1px solid var(--border); } }
+  .gauge{ position:relative; width:160px; height:160px; margin-bottom:18px; }
+  .gauge svg{ width:100%; height:100%; transform:rotate(-90deg); }
+  .gauge circle{ fill:none; stroke-width:10; }
+  .gauge .track{ stroke:var(--bg-secondary); }
+  .gauge .value{ stroke:var(--blue); stroke-linecap:round; stroke-dasharray:439.8; stroke-dashoffset:439.8; transition:stroke-dashoffset 1.4s var(--ease); }
+  .gauge-num{ position:absolute; inset:0; display:flex; align-items:center; justify-content:center; flex-direction:column; }
+  .gauge-num strong{ font-size:2.25rem; font-weight:800; }
+  .gauge-num span{ font-size:.75rem; color:var(--text-muted); }
+  .audit-score p{ font-size:.875rem; max-width:220px; }
+
+  .audit-metrics{ display:grid; grid-template-columns:repeat(3,1fr); border-bottom:1px solid var(--border); }
+  .audit-metric{ padding:26px 20px; text-align:center; border-right:1px solid var(--border); }
+  .audit-metric:last-child{ border-right:none; }
+  .audit-metric strong{ display:block; font-size:1.75rem; font-weight:800; margin-bottom:4px; }
+  .audit-metric span{ font-size:.8125rem; color:var(--text-muted); }
+  .audit-metric.critical strong{ color:var(--red); }
+  .audit-metric.warning strong{ color:var(--amber); }
+  .audit-metric.opportunity strong{ color:var(--blue); }
+
+  .priority-list{ padding:24px 28px; }
+  .priority-list h4{ font-size:.8125rem; text-transform:uppercase; letter-spacing:.03em; color:var(--text-muted); margin-bottom:16px; font-weight:700; }
+  .priority-item{ display:flex; align-items:center; justify-content:space-between; gap:12px; padding:12px 0; border-top:1px solid var(--border); font-size:.9375rem; }
+  .priority-item:first-of-type{ border-top:none; }
+  .priority-item .impact{ font-size:.75rem; font-weight:600; padding:3px 9px; border-radius:999px; flex-shrink:0; }
+  .impact.high{ background:#FEF2F2; color:var(--red); }
+  .impact.medium{ background:#FFFBEB; color:var(--amber); }
+
+  /* ===== Tools ===== */
+  .tools-row{ display:flex; flex-wrap:wrap; gap:12px; justify-content:center; }
+  .tool-pill{
+    padding:10px 20px; border-radius:999px; border:1px solid var(--border);
+    font-size:.9375rem; font-weight:500; color:var(--text-muted); background:#fff;
+    transition:border-color .2s var(--ease), color .2s var(--ease), transform .2s var(--ease);
+  }
+  .tool-pill:hover{ border-color:var(--blue); color:var(--blue); transform:translateY(-2px); }
+
+  /* ===== About ===== */
+  .about-grid{ display:grid; grid-template-columns:.85fr 1.15fr; gap:64px; align-items:center; }
+  @media (max-width:820px){ .about-grid{ grid-template-columns:1fr; gap:36px; } }
+  .about-photo{
+    aspect-ratio:4/5; border-radius:var(--radius-lg); overflow:hidden; position:relative;
+    background:linear-gradient(155deg,#EFF4FE 0%, #F8FAFC 55%, #ffffff 100%);
+    border:1px solid var(--border);
+    display:flex; align-items:center; justify-content:center;
+  }
+  .about-photo .ph-mono{ font-family:'JetBrains Mono',monospace; font-size:.8125rem; color:var(--text-muted); text-align:center; padding:24px; }
+  .about-photo svg{ width:64px; height:64px; stroke:var(--blue); opacity:.5; margin-bottom:14px; }
+  .about-body p{ margin-bottom:18px; font-size:1.0625rem; }
+  .about-body p:last-of-type{ margin-bottom:0; }
+
+  /* ===== FAQ ===== */
+  .faq-list{ border-top:1px solid var(--border); }
+  .faq-item{ border-bottom:1px solid var(--border); }
+  .faq-q{
+    display:flex; align-items:center; justify-content:space-between; gap:20px;
+    padding:24px 4px; background:none; border:none; width:100%; text-align:left;
+    font-size:1.0625rem; font-weight:600; color:var(--text);
+  }
+  .faq-q svg{ width:20px; height:20px; stroke:var(--text-muted); flex-shrink:0; transition:transform .3s var(--ease); }
+  .faq-item.open .faq-q svg{ transform:rotate(45deg); }
+  .faq-a{ max-height:0; overflow:hidden; transition:max-height .35s var(--ease); }
+  .faq-a p{ padding:0 4px 24px; font-size:.9375rem; max-width:640px; }
+  .faq-item.open .faq-a{ max-height:220px; }
+
+  /* ===== Final CTA ===== */
+  .cta-final{
+    background:var(--text); color:#fff; border-radius:var(--radius-lg);
+    padding:72px 48px; text-align:center;
+  }
+  @media (max-width:640px){ .cta-final{ padding:56px 24px; } }
+  .cta-final h2{ color:#fff; margin-bottom:16px; }
+  .cta-final p{ color:#94A3B8; max-width:520px; margin:0 auto 32px; font-size:1.0625rem; }
+  .cta-final .btn-group{ justify-content:center; }
+  .cta-final .btn-secondary{ background:transparent; color:#fff; border-color:#334155; }
+  .cta-final .btn-secondary:hover{ border-color:#64748B; }
+
+  /* ===== Footer ===== */
+  footer{ border-top:1px solid var(--border); padding:48px 0; }
+  .footer-row{ display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:20px; }
+  .footer-brand span{ display:block; font-size:.875rem; color:var(--text-muted); margin-top:2px; }
+  .footer-links{ display:flex; gap:28px; flex-wrap:wrap; }
+  .footer-links a{ font-size:.875rem; color:var(--text-muted); transition:color .2s var(--ease); }
+  .footer-links a:hover{ color:var(--text); }
+  .footer-copy{ font-size:.8125rem; color:#94A3B8; margin-top:28px; }
+
+  :focus-visible{ outline:2px solid var(--blue); outline-offset:3px; border-radius:4px; }
+</style>
+</head>
+<body>
+
+<header id="siteHeader">
+  <div class="container nav">
+    <a href="#top" class="brand">
+      <strong>Pedro Silva</strong>
+      <span>Technical SEO & AI Search Consultant</span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#servicos">Serviços</a>
+      <a href="#processo">Como trabalho</a>
+      <a href="#ferramentas">Ferramentas</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="#contacto" class="btn btn-primary">Contacto</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="reveal in">
+        <div class="badge-pill"><span class="badge-dot"></span> Disponível para novos projetos · Lisboa</div>
+        <h1>SEO Técnico para empresas que querem crescer.</h1>
+        <p class="lead">Aumento a visibilidade orgânica através de auditorias técnicas, SEO internacional e estratégias de AI Search (GEO), ajudando empresas a construir uma base sólida para crescer no Google e na pesquisa baseada em IA.</p>
+        <div class="btn-group">
+          <a href="#contacto" class="btn btn-primary">Solicitar Auditoria</a>
+          <a href="#contacto" class="btn btn-secondary">Agendar Reunião</a>
+        </div>
+        <div class="stats-inline">
+          <div class="stat-item"><strong>5+</strong><span>Anos de experiência</span></div>
+          <div class="stat-item"><strong>50+</strong><span>Mercados internacionais</span></div>
+          <div class="stat-item"><strong>100%</strong><span>Foco em SEO Técnico</span></div>
+          <div class="stat-item"><strong>AI</strong><span>Search Ready</span></div>
+        </div>
+      </div>
+
+      <div class="reveal in">
+        <div class="terminal">
+          <div class="terminal-bar">
+            <span></span><span></span><span></span>
+            <span class="terminal-title mono">auditoria.log</span>
+          </div>
+          <div class="terminal-body mono" id="termBody"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="servicos">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Serviços</p>
+        <h2>No que posso ajudar</h2>
+        <p>Áreas de especialização técnica — dos fundamentos de crawling e indexação ao AI Search.</p>
+      </div>
+
+      <div class="services-grid reveal-group">
+        <div class="service-card reveal">
+          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+          <h3>Auditoria Técnica</h3>
+          <p>Identificação e priorização dos problemas técnicos que limitam a performance orgânica do website.</p>
+          <div class="chip-row">
+            <span class="chip">Crawling</span><span class="chip">Indexação</span><span class="chip">Core Web Vitals</span>
+            <span class="chip">Canonicals</span><span class="chip">Robots.txt</span><span class="chip">XML Sitemap</span>
+            <span class="chip">Schema Markup</span><span class="chip">Arquitetura</span><span class="chip">JavaScript SEO</span>
+          </div>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3M12 18v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M3 12h3M18 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/><circle cx="12" cy="12" r="4"/></svg></div>
+          <h3>AI Search (GEO)</h3>
+          <p>Preparação do website para a nova geração da pesquisa, otimizada para motores baseados em IA.</p>
+          <div class="chip-row">
+            <span class="chip">Google AI Overviews</span><span class="chip">ChatGPT Search</span><span class="chip">Gemini</span>
+            <span class="chip">Entidades</span><span class="chip">Estruturação de Conteúdo</span><span class="chip">Schema</span><span class="chip">E-E-A-T</span>
+          </div>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.9 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.9-3.8-9s1.3-6.4 3.8-9z"/></svg></div>
+          <h3>SEO Internacional</h3>
+          <p>Expansão para novos mercados com uma estratégia técnica sólida e escalável.</p>
+          <div class="chip-row">
+            <span class="chip">hreflang</span><span class="chip">Arquitetura</span><span class="chip">Conteúdo multilingue</span><span class="chip">Mercados internacionais</span>
+          </div>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4h13M8 12h13M8 20h13"/><circle cx="3.5" cy="4" r="1.5"/><circle cx="3.5" cy="12" r="1.5"/><circle cx="3.5" cy="20" r="1.5"/></svg></div>
+          <h3>Consultoria Técnica</h3>
+          <p>Acompanhamento estratégico para equipas de marketing e desenvolvimento.</p>
+          <div class="chip-row">
+            <span class="chip">Roadmap</span><span class="chip">Code review SEO</span><span class="chip">Formação de equipas</span><span class="chip">Auditorias contínuas</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROBLEMS -->
+  <section id="problemas" style="background:var(--bg-secondary);">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Problemas que resolvo</p>
+        <h2>Sinais de que o SEO técnico precisa de atenção</h2>
+      </div>
+      <div class="problems-grid reveal">
+        <div class="problem-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><line x1="9" y1="9" x2="15" y2="15"/><line x1="15" y1="9" x2="9" y2="15"/></svg> O Google não indexa páginas importantes</div>
+        <div class="problem-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><line x1="9" y1="9" x2="15" y2="15"/><line x1="15" y1="9" x2="9" y2="15"/></svg> O website perdeu tráfego orgânico</div>
+        <div class="problem-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><line x1="9" y1="9" x2="15" y2="15"/><line x1="15" y1="9" x2="9" y2="15"/></svg> Problemas de Core Web Vitals</div>
+        <div class="problem-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><line x1="9" y1="9" x2="15" y2="15"/><line x1="15" y1="9" x2="9" y2="15"/></svg> Implementação incorreta de Schema</div>
+        <div class="problem-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><line x1="9" y1="9" x2="15" y2="15"/><line x1="15" y1="9" x2="9" y2="15"/></svg> Problemas de hreflang</div>
+        <div class="problem-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><line x1="9" y1="9" x2="15" y2="15"/><line x1="15" y1="9" x2="9" y2="15"/></svg> Conteúdo duplicado</div>
+        <div class="problem-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><line x1="9" y1="9" x2="15" y2="15"/><line x1="15" y1="9" x2="9" y2="15"/></svg> JavaScript impede a indexação</div>
+        <div class="problem-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><line x1="9" y1="9" x2="15" y2="15"/><line x1="15" y1="9" x2="9" y2="15"/></svg> AI Search não compreende o website</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section id="processo">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Como trabalho</p>
+        <h2>Um processo claro, do diagnóstico à monitorização</h2>
+      </div>
+
+      <div class="process-list reveal-group">
+        <div class="process-step reveal"><span class="num">01</span><h3>Diagnóstico</h3><p>Compreendo o negócio e os objetivos.</p></div>
+        <div class="process-step reveal"><span class="num">02</span><h3>Auditoria</h3><p>Analiso profundamente o website.</p></div>
+        <div class="process-step reveal"><span class="num">03</span><h3>Roadmap</h3><p>Priorizo as melhorias de maior impacto.</p></div>
+        <div class="process-step reveal"><span class="num">04</span><h3>Implementação</h3><p>Acompanho a equipa técnica.</p></div>
+        <div class="process-step reveal"><span class="num">05</span><h3>Monitorização</h3><p>Medição contínua e otimização.</p></div>
+      </div>
+
+      <!-- Audit flow diagram -->
+      <div class="flow reveal">
+        <div class="section-head" style="margin-bottom:40px;">
+          <p class="eyebrow">Em detalhe</p>
+          <h3>O que acontece numa auditoria técnica?</h3>
+        </div>
+        <div class="flow-track" id="flowTrack">
+          <div class="flow-node"><div class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/></svg></div><span class="label">Website</span></div>
+          <div class="flow-arrow"></div>
+          <div class="flow-node"><div class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div><span class="label">Crawling</span></div>
+          <div class="flow-arrow"></div>
+          <div class="flow-node"><div class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg></div><span class="label">Indexação</span></div>
+          <div class="flow-arrow"></div>
+          <div class="flow-node"><div class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V9M12 19V5M20 19v-7"/></svg></div><span class="label">Análise Técnica</span></div>
+          <div class="flow-arrow"></div>
+          <div class="flow-node"><div class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4M2 12l3 3M2 12l3-3"/></svg></div><span class="label">Roadmap</span></div>
+          <div class="flow-arrow"></div>
+          <div class="flow-node"><div class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div><span class="label">Implementação</span></div>
+          <div class="flow-arrow"></div>
+          <div class="flow-node"><div class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 17 9 11 13 15 21 6"/><polyline points="15 6 21 6 21 12"/></svg></div><span class="label">Melhoria da Visibilidade</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AUDIT EXAMPLE -->
+  <section id="exemplo" style="background:var(--bg-secondary);">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Exemplo</p>
+        <h2>Como é um relatório de auditoria</h2>
+        <p>Pré-visualização ilustrativa da estrutura usada nos relatórios de auditoria técnica.</p>
+      </div>
+
+      <div class="audit-card reveal" id="auditCard">
+        <div class="audit-card-head">
+          <strong>Relatório de Auditoria Técnica — cliente.com</strong>
+          <span class="fictional-badge">Exemplo fictício</span>
+        </div>
+        <div class="audit-card-body">
+          <div class="audit-score">
+            <div class="gauge">
+              <svg viewBox="0 0 160 160">
+                <circle class="track" cx="80" cy="80" r="70"/>
+                <circle class="value" id="gaugeValue" cx="80" cy="80" r="70"/>
+              </svg>
+              <div class="gauge-num"><strong id="gaugeNum">0</strong><span>/ 100</span></div>
+            </div>
+            <p>Índice de Saúde do Website — baseado em crawling, indexação, performance e dados estruturados.</p>
+          </div>
+          <div>
+            <div class="audit-metrics">
+              <div class="audit-metric critical"><strong>12</strong><span>Erros Críticos</span></div>
+              <div class="audit-metric warning"><strong>34</strong><span>Avisos</span></div>
+              <div class="audit-metric opportunity"><strong>21</strong><span>Oportunidades</span></div>
+            </div>
+            <div class="priority-list">
+              <h4>Plano de Prioridades</h4>
+              <div class="priority-item"><span>1. Corrigir erros de indexação</span><span class="impact high">Alto impacto</span></div>
+              <div class="priority-item"><span>2. Otimizar Core Web Vitals</span><span class="impact high">Alto impacto</span></div>
+              <div class="priority-item"><span>3. Implementar Schema Markup</span><span class="impact medium">Médio impacto</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOOLS -->
+  <section id="ferramentas">
+    <div class="container">
+      <div class="section-head center reveal" style="margin-left:auto;margin-right:auto;">
+        <p class="eyebrow">Ferramentas</p>
+        <h2>Stack de trabalho</h2>
+        <p>Ferramentas utilizadas para auditorias, análise de dados e implementação técnica.</p>
+      </div>
+      <div class="tools-row reveal">
+        <span class="tool-pill">Google Search Console</span>
+        <span class="tool-pill">Google Analytics</span>
+        <span class="tool-pill">Screaming Frog</span>
+        <span class="tool-pill">Ahrefs</span>
+        <span class="tool-pill">SEMrush</span>
+        <span class="tool-pill">Looker Studio</span>
+        <span class="tool-pill">Python</span>
+        <span class="tool-pill">Schema.org</span>
+        <span class="tool-pill">ChatGPT</span>
+        <span class="tool-pill">Gemini</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="sobre" style="background:var(--bg-secondary);">
+    <div class="container about-grid">
+      <div class="about-photo reveal">
+        <!-- Substituir por fotografia real: fundo claro, estilo casual-profissional -->
+        <div class="ph-mono">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c1.5-4 5-6 8-6s6.5 2 8 6"/></svg>
+          fotografia<br>a adicionar
+        </div>
+      </div>
+      <div class="about-body reveal">
+        <p class="eyebrow">Sobre mim</p>
+        <h2 style="margin-bottom:22px;">Pedro Silva</h2>
+        <p>Sou especialista em SEO Técnico com experiência em projetos internacionais para dezenas de mercados.</p>
+        <p>Trabalho diariamente com equipas multidisciplinares para identificar problemas técnicos, definir prioridades e implementar melhorias que aumentam a visibilidade orgânica.</p>
+        <p>Nos últimos anos, tenho acompanhado também a evolução da pesquisa baseada em Inteligência Artificial, ajudando a preparar websites para um ecossistema onde o Google AI Overviews, o ChatGPT e o Gemini têm um papel cada vez mais relevante.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="container" style="max-width:820px;">
+      <div class="section-head reveal">
+        <p class="eyebrow">FAQ</p>
+        <h2>Perguntas Frequentes</h2>
+      </div>
+      <div class="faq-list reveal" id="faqList">
+        <div class="faq-item">
+          <button class="faq-q">Quanto tempo demora uma auditoria técnica de SEO?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+          <div class="faq-a"><p>Depende da dimensão do website, mas a maioria das auditorias fica concluída entre 2 a 4 semanas, incluindo diagnóstico, análise e entrega do roadmap de prioridades.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Trabalhas com empresas fora de Portugal?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+          <div class="faq-a"><p>Sim. Tenho experiência com projetos internacionais em mais de 50 mercados e trabalho remotamente com equipas em qualquer fuso horário.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">O que é AI Search e porque é importante?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+          <div class="faq-a"><p>Refere-se à forma como motores baseados em Inteligência Artificial, como o Google AI Overviews, o ChatGPT Search e o Gemini, encontram e apresentam informação. Preparar um website para este ecossistema é cada vez mais importante para manter visibilidade.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Como funciona o processo de implementação?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+          <div class="faq-a"><p>Depois da auditoria e do roadmap de prioridades, acompanho diretamente a equipa técnica ou de desenvolvimento na implementação, com sessões de validação e monitorização contínua dos resultados.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Trabalhas com que tipo de websites ou CMS?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+          <div class="faq-a"><p>Trabalho com qualquer stack técnico, incluindo WordPress, Shopify, plataformas headless e aplicações JavaScript (React, Vue, Next.js), com especial foco em SEO técnico para frameworks modernos.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Qual é o primeiro passo para começar?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+          <div class="faq-a"><p>Uma conversa inicial gratuita, onde percebo o contexto do negócio e faço uma primeira análise às principais oportunidades técnicas do website.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section id="contacto">
+    <div class="container">
+      <div class="cta-final reveal">
+        <h2>Vamos descobrir o potencial do seu website?</h2>
+        <p>Agende uma conversa inicial gratuita e receba uma primeira análise às principais oportunidades técnicas do seu website.</p>
+        <div class="btn-group">
+          <!-- Atualizar com o email / link de agenda reais -->
+          <a href="mailto:ola@pedrosilva.pt?subject=Pedido%20de%20Auditoria%20SEO" class="btn btn-primary">Solicitar Auditoria</a>
+          <a href="mailto:ola@pedrosilva.pt?subject=Agendar%20Reuni%C3%A3o" class="btn btn-secondary">Agendar Reunião</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-row">
+      <div class="footer-brand">
+        <strong>Pedro Silva</strong>
+        <span>Technical SEO & AI Search Consultant</span>
+      </div>
+      <div class="footer-links">
+        <a href="#servicos">Serviços</a>
+        <a href="#processo">Como trabalho</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#faq">FAQ</a>
+        <a href="mailto:ola@pedrosilva.pt">ola@pedrosilva.pt</a>
+      </div>
+    </div>
+    <p class="footer-copy">© 2026 Pedro Silva. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<script>
+  // Header scroll state
+  const header = document.getElementById('siteHeader');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 8);
+  }, { passive:true });
+
+  // Mobile nav toggle
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  navToggle.addEventListener('click', () => {
+    const open = navLinks.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', open);
+  });
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+    navToggle.setAttribute('aria-expanded', 'false');
+  }));
+
+  // Scroll reveal
+  const revealEls = document.querySelectorAll('.reveal:not(.in)');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold:0.15, rootMargin:'0px 0px -40px 0px' });
+  revealEls.forEach(el => io.observe(el));
+
+  // Hero terminal typing sequence
+  const termLines = [
+    { sym:'$', text:'crawling https://cliente.com', dim:false },
+    { sym:'→', text:'1.204 URLs encontrados', dim:true },
+    { sym:'✓', text:'Indexação verificada', cls:'ok' },
+    { sym:'⚠', text:'12 problemas de Core Web Vitals', cls:'warn' },
+    { sym:'✓', text:'Schema Markup validado', cls:'ok' },
+    { sym:'⚠', text:'3 conflitos de hreflang', cls:'warn' },
+    { sym:'→', text:'a gerar roadmap de prioridades…', dim:true },
+  ];
+  const termBody = document.getElementById('termBody');
+  function runTerminal(){
+    termBody.innerHTML = '';
+    termLines.forEach((l, i) => {
+      const row = document.createElement('div');
+      row.className = 'term-line' + (l.cls ? ' ' + l.cls : '');
+      row.style.animationDelay = (i * 0.45) + 's';
+      row.innerHTML = `<span class="sym">${l.sym}</span><span class="${l.dim ? 'dim' : ''}">${l.text}</span>`;
+      termBody.appendChild(row);
+    });
+    const cursor = document.createElement('span');
+    cursor.className = 'term-cursor';
+    termBody.lastElementChild.appendChild(cursor);
+  }
+  runTerminal();
+
+  // Flow diagram sequential highlight on scroll into view
+  const flowTrack = document.getElementById('flowTrack');
+  let flowDone = false;
+  const flowIO = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !flowDone) {
+        flowDone = true;
+        const nodes = flowTrack.querySelectorAll('.flow-node');
+        nodes.forEach((n, i) => setTimeout(() => n.classList.add('on'), i * 220));
+        flowIO.disconnect();
+      }
+    });
+  }, { threshold:0.3 });
+  if (flowTrack) flowIO.observe(flowTrack);
+
+  // Gauge animation
+  const gaugeValue = document.getElementById('gaugeValue');
+  const gaugeNum = document.getElementById('gaugeNum');
+  const auditCard = document.getElementById('auditCard');
+  let gaugeDone = false;
+  const targetScore = 68;
+  const circumference = 439.8;
+  const gaugeIO = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !gaugeDone) {
+        gaugeDone = true;
+        const offset = circumference - (targetScore / 100) * circumference;
+        gaugeValue.style.strokeDashoffset = offset;
+        let n = 0;
+        const step = () => {
+          n += 2;
+          if (n >= targetScore) { n = targetScore; gaugeNum.textContent = n; return; }
+          gaugeNum.textContent = n;
+          requestAnimationFrame(() => setTimeout(step, 18));
+        };
+        step();
+        gaugeIO.disconnect();
+      }
+    });
+  }, { threshold:0.35 });
+  if (auditCard) gaugeIO.observe(auditCard);
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-item').forEach(item => {
+    item.querySelector('.faq-q').addEventListener('click', () => {
+      const wasOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(o => o.classList.remove('open'));
+      if (!wasOpen) item.classList.add('open');
+    });
+  });
+</script>
+
+</body>
+</html>
