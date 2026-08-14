@@ -406,6 +406,37 @@
   .footer-links a{ font-size:.875rem; color:var(--text-muted); transition:color .2s var(--ease); }
   .footer-links a:hover{ color:var(--text); }
   .footer-copy{ font-size:.8125rem; color:#94A3B8; margin-top:28px; }
+  .footer-social{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-top:20px;
+}
+
+.linkedin-link{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:40px;
+  height:40px;
+  border:1px solid var(--border);
+  border-radius:10px;
+  color:var(--text-muted);
+  transition:color .2s var(--ease), border-color .2s var(--ease), transform .2s var(--ease), background .2s var(--ease);
+}
+
+.linkedin-link:hover{
+  color:var(--blue);
+  border-color:var(--blue);
+  background:var(--blue-tint);
+  transform:translateY(-2px);
+}
+
+.linkedin-link svg{
+  width:20px;
+  height:20px;
+  fill:currentColor;
+}
 
   :focus-visible{ outline:2px solid var(--blue); outline-offset:3px; border-radius:4px; }
 </style>
@@ -725,6 +756,23 @@
       <div class="footer-brand">
         <strong>Pedro Silva</strong>
         <span>Technical SEO & AI Search Consultant</span>
+         <div class="footer-social">
+    <a
+      href="https://www.linkedin.com/in/pedro-silva-seo-specialist/"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="LinkedIn"
+      class="linkedin-link"
+    >
+      <svg
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+      >
+        <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.95v5.66H9.34V8.99h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.29zM5.32 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM3.54 20.45H7.1V8.99H3.54v11.46zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45C23.2 24 24 .77 24 1.72V22.28C24 23.23 23.2 24 22.22 24z"/>
+      </svg>
+    </a>
+  </div>
       </div>
       <div class="footer-links">
         <a href="#servicos">Serviços</a>
