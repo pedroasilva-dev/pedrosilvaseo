@@ -192,6 +192,9 @@ code{
   border-radius:5px;
 }
 
+
+/* HEADER */
+
 header{
   position:fixed;
   top:0;
@@ -201,6 +204,7 @@ header{
 
   background:rgba(255,255,255,.85);
   backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
 
   border-bottom:1px solid var(--border);
 }
@@ -246,7 +250,17 @@ header{
   display:none;
   background:none;
   border:0;
+  padding:8px;
+  cursor:pointer;
 }
+
+.nav-toggle svg{
+  width:22px;
+  height:22px;
+}
+
+
+/* BUTTONS */
 
 .btn{
   display:inline-flex;
@@ -269,6 +283,20 @@ header{
 .btn-primary:hover{
   background:var(--blue-dark);
 }
+
+/* Important: overrides article link colour */
+
+.article-content a.btn-primary{
+  color:#fff;
+}
+
+.article-content a.btn-primary:hover{
+  color:#fff;
+  text-decoration:none;
+}
+
+
+/* ARTICLE HEADER */
 
 .blog-header{
   padding:160px 0 70px;
@@ -330,10 +358,13 @@ header{
   font-size:.85rem;
 }
 
+
+/* ARTICLE LAYOUT */
+
 .article-layout{
   display:grid;
-  grid-template-columns:minmax(0,760px) 260px;
-  gap:70px;
+  grid-template-columns:minmax(0,760px) 280px;
+  gap:60px;
 
   padding:70px 0 100px;
 }
@@ -355,6 +386,9 @@ header{
   margin-top:0;
 }
 
+
+/* CALLOUT */
+
 .callout{
   background:var(--blue-tint);
 
@@ -371,6 +405,9 @@ header{
   margin:0;
   color:#334155;
 }
+
+
+/* CHECKLIST */
 
 .checklist{
   background:#F8FAFC;
@@ -392,14 +429,17 @@ header{
   margin-bottom:0;
 }
 
-.toc{
+
+/* TABLE OF CONTENTS */
+
+.article-sidebar{
   position:sticky;
   top:100px;
-
   height:max-content;
+}
 
+.toc{
   border-left:1px solid var(--border);
-
   padding-left:22px;
 }
 
@@ -413,14 +453,18 @@ header{
   display:block;
 
   font-size:.82rem;
+  line-height:1.45;
   color:var(--text-muted);
 
-  margin-bottom:10px;
+  margin-bottom:11px;
 }
 
 .toc a:hover{
   color:var(--blue);
 }
+
+
+/* CTA */
 
 .article-cta{
   margin-top:70px;
@@ -447,6 +491,9 @@ header{
   margin-top:10px;
 }
 
+
+/* RELATED */
+
 .related{
   padding:80px 0;
 
@@ -462,7 +509,7 @@ header{
 .related-grid{
   display:grid;
 
-  grid-template-columns:repeat(3,1fr);
+  grid-template-columns:repeat(2,1fr);
 
   gap:18px;
 }
@@ -497,6 +544,9 @@ header{
   font-size:1.15rem;
   margin:12px 0 0;
 }
+
+
+/* FOOTER */
 
 footer{
   border-top:1px solid var(--border);
@@ -537,21 +587,56 @@ footer{
 }
 
 
+/* MOBILE */
+
 @media(max-width:900px){
 
   .nav-links{
-    display:none;
+    position:absolute;
+
+    top:72px;
+    left:0;
+    right:0;
+
+    background:#fff;
+
+    display:flex;
+    flex-direction:column;
+    gap:0;
+
+    max-height:0;
+    overflow:hidden;
+    opacity:0;
+
+    border-bottom:1px solid var(--border);
+
+    transition:max-height .3s ease, opacity .3s ease;
+  }
+
+  .nav-links.open{
+    max-height:500px;
+    opacity:1;
+  }
+
+  .nav-links a{
+    width:100%;
+    padding:16px 24px;
+    border-bottom:1px solid var(--border);
   }
 
   .nav-toggle{
     display:block;
   }
 
+  .nav > .btn{
+    display:none;
+  }
+
   .article-layout{
     grid-template-columns:1fr;
   }
 
-  .toc{
+  .article-sidebar{
     display:none;
   }
 
@@ -560,6 +645,7 @@ footer{
   }
 
 }
+
 
 @media(max-width:640px){
 
@@ -573,6 +659,10 @@ footer{
 
   .article-content h2{
     margin-top:45px;
+  }
+
+  .article-cta{
+    padding:35px 25px;
   }
 
 }
@@ -602,7 +692,7 @@ Technical SEO & AI Search Consultant
 </a>
 
 
-<nav class="nav-links">
+<nav class="nav-links" id="navLinks">
 
 <a href="/">Início</a>
 
@@ -622,6 +712,30 @@ Technical SEO & AI Search Consultant
 <a href="/#contacto" class="btn btn-primary">
 Contacto
 </a>
+
+
+<button
+class="nav-toggle"
+id="navToggle"
+aria-label="Abrir menu"
+aria-expanded="false"
+>
+
+<svg
+viewBox="0 0 24 24"
+fill="none"
+stroke="currentColor"
+stroke-width="2"
+stroke-linecap="round"
+>
+
+<line x1="3" y1="6" x2="21" y2="6"/>
+<line x1="3" y1="12" x2="21" y2="12"/>
+<line x1="3" y1="18" x2="21" y2="18"/>
+
+</svg>
+
+</button>
 
 </div>
 
@@ -702,7 +816,7 @@ website ser encontrado, citado e recomendado por sistemas de IA.
 <article class="article-content">
 
 
-<h2>
+<h2 id="o-que-e-o-chatgpt-search">
 O que é o ChatGPT Search?
 </h2>
 
@@ -736,7 +850,7 @@ considerados relevantes e utilizados como fonte por sistemas de IA.
 </div>
 
 
-<h2>
+<h2 id="como-funciona-a-pesquisa-no-chatgpt">
 Como funciona a pesquisa no ChatGPT?
 </h2>
 
@@ -769,7 +883,7 @@ de muito mais do que simplesmente inserir uma keyword numa página.
 </p>
 
 
-<h2>
+<h2 id="chatgpt-search-substitui-o-google">
 O ChatGPT Search substitui o Google?
 </h2>
 
@@ -805,7 +919,7 @@ considere diferentes ambientes de pesquisa.
 </p>
 
 
-<h2>
+<h2 id="como-aparecer-no-chatgpt-search">
 Como aparecer no ChatGPT Search?
 </h2>
 
@@ -986,7 +1100,7 @@ estrutura lógica de internal linking.
 </p>
 
 
-<h2>
+<h2 id="chatgpt-search-e-geo">
 ChatGPT Search e GEO: qual é a relação?
 </h2>
 
@@ -1009,6 +1123,7 @@ separadas.
 <p>
 Existe uma grande sobreposição entre os dois:
 </p>
+
 
 <div class="checklist">
 
@@ -1040,7 +1155,7 @@ descoberta e apresentada.
 </p>
 
 
-<h2>
+<h2 id="preparar-website-para-ai-search">
 O que fazer para preparar um website para AI Search?
 </h2>
 
@@ -1081,7 +1196,7 @@ Checklist de AI Search
 </div>
 
 
-<h2>
+<h2 id="medir-visibilidade-no-chatgpt">
 Como medir a visibilidade no ChatGPT?
 </h2>
 
@@ -1123,7 +1238,7 @@ multicanal</strong>.
 </p>
 
 
-<h2>
+<h2 id="chatgpt-search-muda-a-forma-de-fazer-seo">
 ChatGPT Search muda a forma de fazer SEO?
 </h2>
 
@@ -1150,7 +1265,7 @@ baseada em IA</strong>.
 </p>
 
 
-<h2>
+<h2 id="conclusao">
 Conclusão
 </h2>
 
@@ -1204,43 +1319,51 @@ Solicitar uma auditoria
 
 <!-- TABLE OF CONTENTS -->
 
-<aside class="toc">
+<aside class="article-sidebar">
+
+<div class="toc">
 
 <strong>
 Neste artigo
 </strong>
 
-<a href="#top">
-O que é ChatGPT Search?
+<a href="#o-que-e-o-chatgpt-search">
+O que é o ChatGPT Search?
 </a>
 
-<a href="#top">
-Como funciona?
+<a href="#como-funciona-a-pesquisa-no-chatgpt">
+Como funciona a pesquisa no ChatGPT?
 </a>
 
-<a href="#top">
-ChatGPT Search vs Google
+<a href="#chatgpt-search-substitui-o-google">
+O ChatGPT Search substitui o Google?
 </a>
 
-<a href="#top">
-Como aparecer no ChatGPT
+<a href="#como-aparecer-no-chatgpt-search">
+Como aparecer no ChatGPT Search?
 </a>
 
-<a href="#top">
+<a href="#chatgpt-search-e-geo">
 ChatGPT Search e GEO
 </a>
 
-<a href="#top">
-Checklist de AI Search
+<a href="#preparar-website-para-ai-search">
+Preparar um website para AI Search
 </a>
 
-<a href="#top">
-Como medir visibilidade
+<a href="#medir-visibilidade-no-chatgpt">
+Como medir a visibilidade
 </a>
 
-<a href="#top">
+<a href="#chatgpt-search-muda-a-forma-de-fazer-seo">
+ChatGPT Search e SEO
+</a>
+
+<a href="#conclusao">
 Conclusão
 </a>
+
+</div>
 
 </aside>
 
@@ -1264,7 +1387,10 @@ Também pode interessar
 <div class="related-grid">
 
 
-<a href="/blog/google-ai-overviews.html" class="related-card">
+<a
+href="/blog/ai-search/google-ai-overviews.html"
+class="related-card"
+>
 
 <span>
 AI Search
@@ -1277,7 +1403,10 @@ Google AI Overviews: Como aparecer nos resultados de pesquisa com IA
 </a>
 
 
-<a href="/blog/google-ai-mode.html" class="related-card">
+<a
+href="/blog/ai-search/google-ai-mode.html"
+class="related-card"
+>
 
 <span>
 AI Search
@@ -1285,19 +1414,6 @@ AI Search
 
 <h3>
 Google AI Mode: O que muda para o SEO
-</h3>
-
-</a>
-
-
-<a href="/blog/geo-vs-seo.html" class="related-card">
-
-<span>
-AI Search
-</span>
-
-<h3>
-GEO vs SEO: Qual é a diferença?
 </h3>
 
 </a>
@@ -1370,6 +1486,44 @@ FAQ
 </footer>
 
 
-</body>
+<script>
 
+/* MOBILE MENU */
+
+const navToggle = document.getElementById('navToggle');
+const navLinks = document.getElementById('navLinks');
+
+navToggle.addEventListener('click', () => {
+
+  const isOpen = navLinks.classList.toggle('open');
+
+  navToggle.setAttribute(
+    'aria-expanded',
+    isOpen ? 'true' : 'false'
+  );
+
+});
+
+
+/* CLOSE MOBILE MENU AFTER CLICK */
+
+navLinks.querySelectorAll('a').forEach(link => {
+
+  link.addEventListener('click', () => {
+
+    navLinks.classList.remove('open');
+
+    navToggle.setAttribute(
+      'aria-expanded',
+      'false'
+    );
+
+  });
+
+});
+
+</script>
+
+
+</body>
 </html>
