@@ -232,6 +232,9 @@ strong{
   color:var(--text);
 }
 
+
+/* HEADER */
+
 header{
   position:fixed;
   top:0;
@@ -283,7 +286,7 @@ header{
 }
 
 
-/* BUTTONS */
+/* BUTTON */
 
 .btn{
   display:inline-flex;
@@ -294,6 +297,7 @@ header{
   font-size:.9rem;
   font-weight:600;
   border:1px solid transparent;
+  text-decoration:none !important;
   transition:
     transform .2s ease,
     box-shadow .2s ease,
@@ -301,18 +305,23 @@ header{
     border-color .2s ease;
 }
 
+.btn:hover{
+  text-decoration:none !important;
+}
+
 .btn-primary{
   background:var(--blue);
-  color:#fff;
-  box-shadow:0 4px 12px rgba(37,99,235,.18);
+  color:#fff !important;
 }
 
 .btn-primary:hover{
   background:var(--blue-dark);
-  color:#fff;
   transform:translateY(-1px);
-  box-shadow:0 6px 16px rgba(37,99,235,.22);
+  text-decoration:none !important;
 }
+
+
+/* MOBILE MENU */
 
 .nav-toggle{
   display:none;
@@ -409,6 +418,14 @@ header{
 
 .article-content a:hover{
   text-decoration:underline;
+}
+
+/* Garante que botões não herdam o sublinhado dos links do artigo */
+
+.article-content a.btn,
+.article-content a.btn:hover{
+  color:#fff !important;
+  text-decoration:none !important;
 }
 
 
@@ -515,6 +532,12 @@ header{
 
 .article-cta .btn{
   color:#fff !important;
+  text-decoration:none !important;
+}
+
+.article-cta .btn:hover{
+  color:#fff !important;
+  text-decoration:none !important;
 }
 
 
