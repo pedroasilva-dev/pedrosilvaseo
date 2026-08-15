@@ -1,0 +1,2235 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Blog de SEO e AI Search | Pedro Silva</title>
+
+<meta name="description" content="Guias e artigos sobre SEO Técnico, AI Search, GEO, Google AI Overviews, ChatGPT Search, SEO Internacional, Core Web Vitals e otimização para motores de pesquisa.">
+
+<meta name="author" content="Pedro Silva">
+<meta name="robots" content="index, follow">
+
+<link rel="canonical" href="https://pedrosilvaseo.vercel.app/blog.html">
+
+<link rel="icon" type="image/svg+xml" href="/favicon-ps.svg">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Blog de SEO Técnico e AI Search | Pedro Silva">
+<meta property="og:description" content="Guias e estratégias sobre SEO Técnico, AI Search, GEO e pesquisa baseada em Inteligência Artificial.">
+<meta property="og:url" content="https://pedrosilvaseo.vercel.app/blog.html">
+<meta property="og:image" content="https://pedrosilvaseo.vercel.app/og-image.jpg">
+<meta property="og:locale" content="pt_PT">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Blog de SEO Técnico e AI Search | Pedro Silva">
+<meta name="twitter:description" content="Guias e estratégias sobre SEO Técnico, AI Search, GEO e pesquisa baseada em Inteligência Artificial.">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3B8KSEMLFP"></script>
+
+<script>
+window.dataLayer = window.dataLayer || [];
+
+function gtag(){
+  dataLayer.push(arguments);
+}
+
+gtag('js', new Date());
+gtag('config', 'G-3B8KSEMLFP');
+</script>
+
+<!-- Schema: Blog -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "Blog de SEO Técnico e AI Search",
+  "description": "Guias e artigos sobre SEO Técnico, AI Search, GEO, SEO Internacional e pesquisa baseada em Inteligência Artificial.",
+  "url": "https://pedrosilvaseo.vercel.app/blog.html",
+  "author": {
+    "@type": "Person",
+    "name": "Pedro Silva",
+    "url": "https://pedrosilvaseo.vercel.app/"
+  }
+}
+</script>
+
+<style>
+
+:root{
+  --bg:#FFFFFF;
+  --bg-secondary:#F8FAFC;
+  --text:#111827;
+  --text-muted:#64748B;
+  --blue:#2563EB;
+  --blue-dark:#1D4ED8;
+  --blue-tint:#EFF4FE;
+  --border:#E5E9F0;
+  --red:#DC2626;
+  --amber:#D97706;
+  --radius:12px;
+  --radius-lg:20px;
+  --shadow:0 1px 2px rgba(17,24,39,.04), 0 8px 24px -12px rgba(17,24,39,.08);
+  --shadow-lg:0 4px 8px rgba(17,24,39,.04), 0 24px 48px -16px rgba(17,24,39,.14);
+  --ease:cubic-bezier(.16,1,.3,1);
+}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+@media (prefers-reduced-motion: reduce){
+
+  html{
+    scroll-behavior:auto;
+  }
+
+  *{
+    animation-duration:.001ms !important;
+    animation-iteration-count:1 !important;
+    transition-duration:.001ms !important;
+  }
+
+}
+
+body{
+  font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+  color:var(--text);
+  background:var(--bg);
+  line-height:1.5;
+  -webkit-font-smoothing:antialiased;
+  font-feature-settings:"ss01" 1, "cv11" 1;
+}
+
+.mono{
+  font-family:'JetBrains Mono',ui-monospace,monospace;
+}
+
+img{
+  max-width:100%;
+  display:block;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+ul{
+  list-style:none;
+}
+
+button{
+  font-family:inherit;
+  cursor:pointer;
+}
+
+.container{
+  max-width:1120px;
+  margin:0 auto;
+  padding:0 24px;
+}
+
+h1,
+h2,
+h3{
+  font-weight:800;
+  letter-spacing:-0.02em;
+  line-height:1.1;
+}
+
+h1{
+  font-size:clamp(2.25rem,4.5vw + 1rem,3.5rem);
+}
+
+h2{
+  font-size:clamp(1.75rem,2.6vw + 1rem,2.5rem);
+}
+
+h3{
+  font-size:clamp(1.25rem,1vw + 1rem,1.75rem);
+  font-weight:700;
+}
+
+p{
+  font-size:1.0625rem;
+  color:var(--text-muted);
+}
+
+.eyebrow{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+
+  font-size:.8125rem;
+  font-weight:600;
+  letter-spacing:.02em;
+
+  color:var(--blue);
+  text-transform:uppercase;
+
+  margin-bottom:16px;
+}
+
+.eyebrow::before{
+  content:"";
+  width:6px;
+  height:6px;
+  border-radius:50%;
+  background:var(--blue);
+  display:inline-block;
+}
+
+section{
+  padding:112px 0;
+}
+
+@media(max-width:768px){
+
+  section{
+    padding:72px 0;
+  }
+
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+
+  padding:14px 24px;
+
+  border-radius:10px;
+
+  font-size:.9375rem;
+  font-weight:600;
+
+  border:1px solid transparent;
+
+  transition:
+    transform .2s var(--ease),
+    box-shadow .2s var(--ease),
+    background .2s var(--ease),
+    border-color .2s var(--ease);
+
+  white-space:nowrap;
+}
+
+.btn-primary{
+  background:var(--blue);
+  color:#fff;
+
+  box-shadow:
+    0 1px 2px rgba(37,99,235,.1),
+    0 8px 20px -8px rgba(37,99,235,.5);
+}
+
+.btn-primary:hover{
+  background:var(--blue-dark);
+  transform:translateY(-1px);
+}
+
+.btn-secondary{
+  background:#fff;
+  color:var(--text);
+  border-color:var(--border);
+}
+
+.btn-secondary:hover{
+  border-color:#CBD5E1;
+  transform:translateY(-1px);
+  box-shadow:var(--shadow);
+}
+
+.btn-group{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+/* =========================
+   REVEAL
+========================= */
+
+.reveal{
+  opacity:0;
+  transform:translateY(18px);
+
+  transition:
+    opacity .7s var(--ease),
+    transform .7s var(--ease);
+}
+
+.reveal.in{
+  opacity:1;
+  transform:none;
+}
+
+.reveal-group .reveal:nth-child(1){
+  transition-delay:.02s;
+}
+
+.reveal-group .reveal:nth-child(2){
+  transition-delay:.08s;
+}
+
+.reveal-group .reveal:nth-child(3){
+  transition-delay:.14s;
+}
+
+.reveal-group .reveal:nth-child(4){
+  transition-delay:.20s;
+}
+
+.reveal-group .reveal:nth-child(5){
+  transition-delay:.26s;
+}
+
+.reveal-group .reveal:nth-child(6){
+  transition-delay:.32s;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index:100;
+
+  background:rgba(255,255,255,.7);
+
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+
+  border-bottom:1px solid transparent;
+
+  transition:
+    border-color .3s var(--ease),
+    background .3s var(--ease);
+}
+
+header.scrolled{
+  border-bottom-color:var(--border);
+  background:rgba(255,255,255,.85);
+}
+
+.nav{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  height:72px;
+}
+
+.brand{
+  display:flex;
+  flex-direction:column;
+  line-height:1.15;
+}
+
+.brand strong{
+  font-size:1rem;
+  font-weight:700;
+  letter-spacing:-0.01em;
+}
+
+.brand span{
+  font-size:.75rem;
+  color:var(--text-muted);
+}
+
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:36px;
+}
+
+.nav-links a{
+  font-size:.9375rem;
+  font-weight:500;
+  color:var(--text-muted);
+
+  transition:color .2s var(--ease);
+}
+
+.nav-links a:hover{
+  color:var(--text);
+}
+
+.nav-cta{
+  display:flex;
+  align-items:center;
+  gap:16px;
+}
+
+.nav-toggle{
+  display:none;
+  background:none;
+  border:none;
+  padding:8px;
+}
+
+.nav-toggle svg{
+  width:22px;
+  height:22px;
+}
+
+@media(max-width:860px){
+
+  .nav-links{
+    position:absolute;
+    top:72px;
+    left:0;
+    right:0;
+
+    background:#fff;
+
+    border-bottom:1px solid var(--border);
+
+    flex-direction:column;
+    align-items:flex-start;
+    gap:0;
+
+    max-height:0;
+    overflow:hidden;
+    opacity:0;
+
+    transition:
+      max-height .35s var(--ease),
+      opacity .3s var(--ease);
+  }
+
+  .nav-links.open{
+    max-height:400px;
+    opacity:1;
+  }
+
+  .nav-links a{
+    padding:16px 24px;
+    width:100%;
+
+    border-bottom:1px solid var(--border);
+  }
+
+  .nav-toggle{
+    display:block;
+  }
+
+  .nav-cta .btn-primary{
+    padding:10px 16px;
+    font-size:.875rem;
+  }
+
+}
+
+/* =========================
+   BLOG HERO
+========================= */
+
+.blog-hero{
+  padding:170px 0 90px;
+  background:var(--bg);
+}
+
+.blog-hero-inner{
+  max-width:760px;
+}
+
+.blog-hero h1{
+  margin-bottom:20px;
+}
+
+.blog-hero p{
+  font-size:1.125rem;
+  max-width:680px;
+}
+
+/* =========================
+   CATEGORY FILTERS
+========================= */
+
+.blog-filters{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+
+  margin-top:40px;
+}
+
+.filter-btn{
+  padding:9px 16px;
+
+  border-radius:999px;
+
+  border:1px solid var(--border);
+
+  background:#fff;
+
+  color:var(--text-muted);
+
+  font-size:.875rem;
+  font-weight:600;
+
+  transition:
+    background .2s var(--ease),
+    color .2s var(--ease),
+    border-color .2s var(--ease);
+}
+
+.filter-btn:hover,
+.filter-btn.active{
+  background:var(--blue-tint);
+  color:var(--blue);
+  border-color:#BFDBFE;
+}
+
+/* =========================
+   FEATURED ARTICLE
+========================= */
+
+.featured-section{
+  background:var(--bg-secondary);
+}
+
+.featured-card{
+  display:grid;
+
+  grid-template-columns:1.1fr .9fr;
+
+  border:1px solid var(--border);
+
+  border-radius:var(--radius-lg);
+
+  overflow:hidden;
+
+  background:#fff;
+
+  box-shadow:var(--shadow);
+
+  transition:
+    transform .25s var(--ease),
+    box-shadow .25s var(--ease);
+}
+
+.featured-card:hover{
+  transform:translateY(-3px);
+  box-shadow:var(--shadow-lg);
+}
+
+.featured-content{
+  padding:48px;
+}
+
+.featured-content .category{
+  margin-bottom:18px;
+}
+
+.featured-content h2{
+  margin-bottom:18px;
+}
+
+.featured-content p{
+  margin-bottom:28px;
+}
+
+.featured-meta{
+  display:flex;
+  align-items:center;
+  gap:16px;
+
+  font-size:.8125rem;
+  color:var(--text-muted);
+}
+
+.featured-visual{
+  background:#0B1120;
+
+  min-height:360px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  padding:40px;
+}
+
+.ai-terminal{
+  width:100%;
+  max-width:400px;
+
+  background:#0F172A;
+
+  border:1px solid #1E293B;
+
+  border-radius:14px;
+
+  overflow:hidden;
+
+  box-shadow:
+    0 20px 50px rgba(0,0,0,.25);
+}
+
+.ai-terminal-head{
+  display:flex;
+  align-items:center;
+  gap:7px;
+
+  padding:12px 16px;
+
+  border-bottom:1px solid #1E293B;
+}
+
+.ai-terminal-head span{
+  width:9px;
+  height:9px;
+
+  border-radius:50%;
+}
+
+.ai-terminal-head span:nth-child(1){
+  background:#FF5F57;
+}
+
+.ai-terminal-head span:nth-child(2){
+  background:#FEBC2E;
+}
+
+.ai-terminal-head span:nth-child(3){
+  background:#28C840;
+}
+
+.ai-terminal-body{
+  padding:22px;
+
+  font-family:'JetBrains Mono',monospace;
+
+  font-size:.75rem;
+
+  color:#CBD5E1;
+
+  line-height:1.9;
+}
+
+.ai-terminal-line{
+  display:block;
+}
+
+.ai-terminal-line.blue{
+  color:#60A5FA;
+}
+
+.ai-terminal-line.green{
+  color:#34D399;
+}
+
+.ai-terminal-line.yellow{
+  color:#FBBF24;
+}
+
+.category{
+  display:inline-flex;
+  align-items:center;
+
+  padding:5px 10px;
+
+  border-radius:999px;
+
+  background:var(--blue-tint);
+
+  color:var(--blue);
+
+  font-size:.75rem;
+
+  font-weight:700;
+
+  text-transform:uppercase;
+
+  letter-spacing:.03em;
+}
+
+/* =========================
+   ARTICLES
+========================= */
+
+.articles-section{
+  background:#fff;
+}
+
+.articles-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+
+  gap:30px;
+
+  margin-bottom:48px;
+}
+
+.articles-head h2{
+  margin-bottom:12px;
+}
+
+.articles-head p{
+  max-width:600px;
+}
+
+.article-grid{
+  display:grid;
+
+  grid-template-columns:repeat(2,1fr);
+
+  gap:20px;
+}
+
+.article-card{
+  border:1px solid var(--border);
+
+  border-radius:var(--radius-lg);
+
+  background:#fff;
+
+  padding:30px;
+
+  transition:
+    border-color .25s var(--ease),
+    box-shadow .25s var(--ease),
+    transform .25s var(--ease);
+}
+
+.article-card:hover{
+  border-color:#CBD5E1;
+
+  box-shadow:var(--shadow-lg);
+
+  transform:translateY(-3px);
+}
+
+.article-card .category{
+  margin-bottom:18px;
+}
+
+.article-card h3{
+  font-size:1.35rem;
+  margin-bottom:12px;
+}
+
+.article-card p{
+  font-size:.9375rem;
+  margin-bottom:24px;
+}
+
+.article-meta{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  gap:15px;
+
+  font-size:.8125rem;
+
+  color:var(--text-muted);
+}
+
+.read-more{
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+
+  color:var(--blue);
+
+  font-size:.875rem;
+
+  font-weight:600;
+}
+
+.read-more svg{
+  width:16px;
+  height:16px;
+
+  transition:transform .2s var(--ease);
+}
+
+.article-card:hover .read-more svg{
+  transform:translateX(3px);
+}
+
+/* =========================
+   TOPICS
+========================= */
+
+.topics-section{
+  background:var(--bg-secondary);
+}
+
+.topics-grid{
+  display:grid;
+
+  grid-template-columns:repeat(3,1fr);
+
+  gap:20px;
+}
+
+.topic-card{
+  padding:28px;
+
+  border:1px solid var(--border);
+
+  border-radius:var(--radius-lg);
+
+  background:#fff;
+}
+
+.topic-card h3{
+  font-size:1.2rem;
+
+  margin-bottom:10px;
+}
+
+.topic-card p{
+  font-size:.875rem;
+}
+
+/* =========================
+   CTA
+========================= */
+
+.cta-final{
+  background:var(--text);
+
+  color:#fff;
+
+  border-radius:var(--radius-lg);
+
+  padding:72px 48px;
+
+  text-align:center;
+}
+
+.cta-final h2{
+  color:#fff;
+
+  margin-bottom:16px;
+}
+
+.cta-final p{
+  color:#94A3B8;
+
+  max-width:520px;
+
+  margin:0 auto 32px;
+
+  font-size:1.0625rem;
+}
+
+.cta-final .btn-group{
+  justify-content:center;
+}
+
+.cta-final .btn-secondary{
+  background:transparent;
+
+  color:#fff;
+
+  border-color:#334155;
+}
+
+.cta-final .btn-secondary:hover{
+  border-color:#64748B;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+  border-top:1px solid var(--border);
+
+  padding:48px 0;
+}
+
+.footer-row{
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+
+  flex-wrap:wrap;
+
+  gap:20px;
+}
+
+.footer-brand span{
+  display:block;
+
+  font-size:.875rem;
+
+  color:var(--text-muted);
+
+  margin-top:2px;
+}
+
+.footer-links{
+  display:flex;
+
+  gap:28px;
+
+  flex-wrap:wrap;
+}
+
+.footer-links a{
+  font-size:.875rem;
+
+  color:var(--text-muted);
+
+  transition:color .2s var(--ease);
+}
+
+.footer-links a:hover{
+  color:var(--text);
+}
+
+.footer-copy{
+  font-size:.8125rem;
+
+  color:#94A3B8;
+
+  margin-top:28px;
+}
+
+.footer-social{
+  display:flex;
+
+  align-items:center;
+
+  gap:12px;
+
+  margin-top:20px;
+}
+
+.linkedin-link,
+.gmail-link{
+  display:inline-flex;
+
+  align-items:center;
+  justify-content:center;
+
+  width:40px;
+  height:40px;
+
+  border:1px solid var(--border);
+
+  border-radius:10px;
+
+  color:var(--text-muted);
+
+  transition:
+    color .2s var(--ease),
+    border-color .2s var(--ease),
+    transform .2s var(--ease),
+    background .2s var(--ease);
+}
+
+.linkedin-link:hover{
+  color:var(--blue);
+
+  border-color:var(--blue);
+
+  background:var(--blue-tint);
+
+  transform:translateY(-2px);
+}
+
+.gmail-link:hover{
+  color:var(--red);
+
+  border-color:var(--red);
+
+  background:#FEF2F2;
+
+  transform:translateY(-2px);
+}
+
+.linkedin-link svg{
+  width:20px;
+  height:20px;
+
+  fill:currentColor;
+}
+
+.gmail-link svg{
+  width:21px;
+  height:21px;
+}
+
+:focus-visible{
+  outline:2px solid var(--blue);
+
+  outline-offset:3px;
+
+  border-radius:4px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:900px){
+
+  .featured-card{
+    grid-template-columns:1fr;
+  }
+
+  .featured-visual{
+    min-height:280px;
+  }
+
+}
+
+@media(max-width:768px){
+
+  .article-grid{
+    grid-template-columns:1fr;
+  }
+
+  .topics-grid{
+    grid-template-columns:1fr;
+  }
+
+  .articles-head{
+    display:block;
+  }
+
+}
+
+@media(max-width:640px){
+
+  .featured-content{
+    padding:30px 24px;
+  }
+
+  .featured-visual{
+    padding:28px 20px;
+  }
+
+  .cta-final{
+    padding:56px 24px;
+  }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header id="siteHeader">
+
+  <div class="container nav">
+
+    <a href="/" class="brand">
+
+      <strong>Pedro Silva</strong>
+
+      <span>
+        Technical SEO & AI Search Consultant
+      </span>
+
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+
+      <a href="/">Início</a>
+
+      <a href="/#servicos">Serviços</a>
+
+      <a href="/#processo">Como trabalho</a>
+
+      <a href="/#ferramentas">Ferramentas</a>
+
+      <a href="/#sobre">Sobre</a>
+
+      <a href="/blog.html" style="color:var(--text);">
+        Blog
+      </a>
+
+      <a href="/#faq">FAQ</a>
+
+    </nav>
+
+    <div class="nav-cta">
+
+      <a
+        href="/#contacto"
+        class="btn btn-primary"
+      >
+        Contacto
+      </a>
+
+      <button
+        class="nav-toggle"
+        id="navToggle"
+        aria-label="Abrir menu"
+        aria-expanded="false"
+      >
+
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+        >
+
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+
+        </svg>
+
+      </button>
+
+    </div>
+
+  </div>
+
+</header>
+
+
+<main>
+
+<!-- =========================
+     BLOG HERO
+========================= -->
+
+<section class="blog-hero">
+
+  <div class="container">
+
+    <div class="blog-hero-inner reveal">
+
+      <p class="eyebrow">
+        Blog
+      </p>
+
+      <h1>
+        SEO Técnico & AI Search
+      </h1>
+
+      <p>
+        Guias, análises e estratégias para aumentar a visibilidade
+        orgânica no Google e preparar websites para a nova geração
+        da pesquisa baseada em Inteligência Artificial.
+      </p>
+
+      <div class="blog-filters">
+
+        <button
+          class="filter-btn active"
+          data-filter="all"
+        >
+          Todos
+        </button>
+
+        <button
+          class="filter-btn"
+          data-filter="ai"
+        >
+          AI Search
+        </button>
+
+        <button
+          class="filter-btn"
+          data-filter="seo"
+        >
+          SEO Técnico
+        </button>
+
+        <button
+          class="filter-btn"
+          data-filter="international"
+        >
+          SEO Internacional
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     FEATURED ARTICLE
+========================= -->
+
+<section class="featured-section">
+
+  <div class="container">
+
+    <a
+      href="blog/ai-search.html"
+      class="featured-card reveal"
+    >
+
+      <div class="featured-content">
+
+        <span class="category">
+          AI Search
+        </span>
+
+        <h2>
+          AI Search: Como otimizar um website para a pesquisa com IA
+        </h2>
+
+        <p>
+          Um guia completo para compreender como o Google,
+          ChatGPT e outros motores baseados em Inteligência
+          Artificial encontram, interpretam e apresentam
+          informação de websites.
+        </p>
+
+        <div class="featured-meta">
+
+          <span>
+            10 min de leitura
+          </span>
+
+          <span>·</span>
+
+          <span>
+            Guia completo
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <div class="featured-visual">
+
+        <div class="ai-terminal">
+
+          <div class="ai-terminal-head">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+          </div>
+
+          <div class="ai-terminal-body">
+
+            <span class="ai-terminal-line blue">
+              &gt; analysing website...
+            </span>
+
+            <span class="ai-terminal-line">
+              crawling: complete
+            </span>
+
+            <span class="ai-terminal-line green">
+              ✓ indexability: ready
+            </span>
+
+            <span class="ai-terminal-line green">
+              ✓ structured data: detected
+            </span>
+
+            <span class="ai-terminal-line yellow">
+              ⚠ entity signals: improve
+            </span>
+
+            <span class="ai-terminal-line blue">
+              &gt; AI Search readiness: 78%
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     ARTICLES
+========================= -->
+
+<section class="articles-section">
+
+  <div class="container">
+
+    <div class="articles-head reveal">
+
+      <div>
+
+        <p class="eyebrow">
+          Artigos
+        </p>
+
+        <h2>
+          Conteúdos recentes
+        </h2>
+
+      </div>
+
+      <p>
+        Conteúdos práticos sobre SEO, pesquisa baseada em IA
+        e otimização técnica de websites.
+      </p>
+
+    </div>
+
+
+    <div
+      class="article-grid reveal-group"
+      id="articleGrid"
+    >
+
+
+      <!-- ARTICLE 1 -->
+
+      <article
+        class="article-card reveal"
+        data-category="ai"
+      >
+
+        <span class="category">
+          AI Search
+        </span>
+
+        <h3>
+          Google AI Overviews: Como aparecer nos resultados de pesquisa com IA
+        </h3>
+
+        <p>
+          O que são os AI Overviews, como funcionam e que fatores
+          podem influenciar a visibilidade de um website nas respostas
+          geradas por Inteligência Artificial.
+        </p>
+
+        <div class="article-meta">
+
+          <span>
+            8 min de leitura
+          </span>
+
+          <a
+            href="blog/google-ai-overviews.html"
+            class="read-more"
+          >
+            Ler artigo
+
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            >
+
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
+
+            </svg>
+
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <!-- ARTICLE 2 -->
+
+      <article
+        class="article-card reveal"
+        data-category="ai"
+      >
+
+        <span class="category">
+          AI Search
+        </span>
+
+        <h3>
+          Google AI Mode: O que muda para o SEO
+        </h3>
+
+        <p>
+          Uma análise sobre o novo paradigma de pesquisa do Google
+          e o que significa para a visibilidade orgânica dos websites.
+        </p>
+
+        <div class="article-meta">
+
+          <span>
+            8 min de leitura
+          </span>
+
+          <a
+            href="blog/google-ai-mode.html"
+            class="read-more"
+          >
+            Ler artigo
+
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            >
+
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
+
+            </svg>
+
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <!-- ARTICLE 3 -->
+
+      <article
+        class="article-card reveal"
+        data-category="ai"
+      >
+
+        <span class="category">
+          AI Search
+        </span>
+
+        <h3>
+          ChatGPT Search: Como aumentar a visibilidade do seu website
+        </h3>
+
+        <p>
+          Descubra como funciona a pesquisa no ChatGPT e quais os
+          fundamentos técnicos e de conteúdo que podem influenciar
+          a presença de um website.
+        </p>
+
+        <div class="article-meta">
+
+          <span>
+            8 min de leitura
+          </span>
+
+          <a
+            href="blog/chatgpt-search.html"
+            class="read-more"
+          >
+            Ler artigo
+
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            >
+
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
+
+            </svg>
+
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <!-- ARTICLE 4 -->
+
+      <article
+        class="article-card reveal"
+        data-category="ai"
+      >
+
+        <span class="category">
+          AI Search
+        </span>
+
+        <h3>
+          GEO vs SEO: Qual é a diferença?
+        </h3>
+
+        <p>
+          SEO e Generative Engine Optimization são a mesma coisa?
+          Perceba o que muda com a evolução da pesquisa baseada
+          em Inteligência Artificial.
+        </p>
+
+        <div class="article-meta">
+
+          <span>
+            7 min de leitura
+          </span>
+
+          <a
+            href="blog/geo-vs-seo.html"
+            class="read-more"
+          >
+            Ler artigo
+
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            >
+
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
+
+            </svg>
+
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <!-- ARTICLE 5 -->
+
+      <article
+        class="article-card reveal"
+        data-category="seo"
+      >
+
+        <span class="category">
+          SEO Técnico
+        </span>
+
+        <h3>
+          Auditoria SEO Técnica: O que analisar num website
+        </h3>
+
+        <p>
+          Os principais elementos técnicos que devem ser analisados
+          numa auditoria SEO, desde crawling e indexação até
+          Core Web Vitals e dados estruturados.
+        </p>
+
+        <div class="article-meta">
+
+          <span>
+            10 min de leitura
+          </span>
+
+          <a
+            href="blog/auditoria-seo.html"
+            class="read-more"
+          >
+            Ler artigo
+
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            >
+
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
+
+            </svg>
+
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <!-- ARTICLE 6 -->
+
+      <article
+        class="article-card reveal"
+        data-category="seo"
+      >
+
+        <span class="category">
+          SEO Técnico
+        </span>
+
+        <h3>
+          Porque é que o Google não indexa uma página?
+        </h3>
+
+        <p>
+          Guia de diagnóstico para perceber porque uma página
+          não aparece no Google e quais os problemas técnicos
+          mais comuns que devem ser analisados.
+        </p>
+
+        <div class="article-meta">
+
+          <span>
+            8 min de leitura
+          </span>
+
+          <a
+            href="blog/indexacao-google.html"
+            class="read-more"
+          >
+            Ler artigo
+
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            >
+
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
+
+            </svg>
+
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <!-- ARTICLE 7 -->
+
+      <article
+        class="article-card reveal"
+        data-category="seo"
+      >
+
+        <span class="category">
+          SEO Técnico
+        </span>
+
+        <h3>
+          Core Web Vitals: Guia completo para SEO
+        </h3>
+
+        <p>
+          Perceba o que são LCP, INP e CLS, como medir Core Web Vitals
+          e porque a performance técnica continua a ser relevante
+          para a experiência e para o SEO.
+        </p>
+
+        <div class="article-meta">
+
+          <span>
+            9 min de leitura
+          </span>
+
+          <a
+            href="blog/core-web-vitals.html"
+            class="read-more"
+          >
+            Ler artigo
+
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            >
+
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
+
+            </svg>
+
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <!-- ARTICLE 8 -->
+
+      <article
+        class="article-card reveal"
+        data-category="seo"
+      >
+
+        <span class="category">
+          SEO Técnico
+        </span>
+
+        <h3>
+          Schema Markup: O que é e como implementar
+        </h3>
+
+        <p>
+          Guia prático sobre dados estruturados, Schema.org,
+          tipos de Schema e como utilizar structured data
+          corretamente.
+        </p>
+
+        <div class="article-meta">
+
+          <span>
+            9 min de leitura
+          </span>
+
+          <a
+            href="blog/schema-markup.html"
+            class="read-more"
+          >
+            Ler artigo
+
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            >
+
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
+
+            </svg>
+
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <!-- ARTICLE 9 -->
+
+      <article
+        class="article-card reveal"
+        data-category="international"
+      >
+
+        <span class="category">
+          SEO Internacional
+        </span>
+
+        <h3>
+          Hreflang: Guia completo de SEO Internacional
+        </h3>
+
+        <p>
+          Como funciona o hreflang, quando utilizá-lo e quais os
+          erros mais comuns em websites com múltiplos idiomas
+          e mercados.
+        </p>
+
+        <div class="article-meta">
+
+          <span>
+            10 min de leitura
+          </span>
+
+          <a
+            href="blog/hreflang.html"
+            class="read-more"
+          >
+            Ler artigo
+
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            >
+
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
+
+            </svg>
+
+          </a>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     TOPICS
+========================= -->
+
+<section class="topics-section">
+
+  <div class="container">
+
+    <div class="section-head center reveal">
+
+      <p class="eyebrow">
+        Áreas
+      </p>
+
+      <h2>
+        Explorar por tema
+      </h2>
+
+      <p>
+        Conteúdos organizados pelas principais áreas
+        de especialização.
+      </p>
+
+    </div>
+
+
+    <div class="topics-grid reveal-group">
+
+
+      <div class="topic-card reveal">
+
+        <span class="category">
+          AI Search
+        </span>
+
+        <h3>
+          Pesquisa com Inteligência Artificial
+        </h3>
+
+        <p>
+          AI Search, Google AI Overviews, AI Mode,
+          ChatGPT Search, GEO e otimização para motores
+          generativos.
+        </p>
+
+      </div>
+
+
+      <div class="topic-card reveal">
+
+        <span class="category">
+          SEO Técnico
+        </span>
+
+        <h3>
+          Fundamentos técnicos
+        </h3>
+
+        <p>
+          Crawling, indexação, Core Web Vitals, Schema,
+          JavaScript SEO, canonicals, robots.txt e sitemaps.
+        </p>
+
+      </div>
+
+
+      <div class="topic-card reveal">
+
+        <span class="category">
+          SEO Internacional
+        </span>
+
+        <h3>
+          Websites internacionais
+        </h3>
+
+        <p>
+          Hreflang, arquitetura internacional, localização
+          e estratégias técnicas para múltiplos mercados.
+        </p>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     CTA
+========================= -->
+
+<section>
+
+  <div class="container">
+
+    <div class="cta-final reveal">
+
+      <h2>
+        O seu website está preparado para a próxima geração da pesquisa?
+      </h2>
+
+      <p>
+        Se pretende melhorar a visibilidade orgânica do seu website,
+        podemos analisar as principais oportunidades técnicas
+        e definir um plano de ação.
+      </p>
+
+      <div class="btn-group">
+
+        <a
+          href="/auditoria.html"
+          class="btn btn-primary"
+        >
+          Solicitar uma auditoria
+        </a>
+
+        <a
+          href="https://calendly.com/pedroasilva-marketing/30min"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-secondary"
+        >
+          Agendar Reunião
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+</main>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+  <div class="container">
+
+    <div class="footer-row">
+
+      <div class="footer-brand">
+
+        <strong>
+          Pedro Silva
+        </strong>
+
+        <span>
+          Technical SEO & AI Search Consultant
+        </span>
+
+
+        <div class="footer-social">
+
+          <a
+            href="https://www.linkedin.com/in/pedro-silva-seo-specialist/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+            class="linkedin-link"
+          >
+
+            <svg
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+
+              <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.95v5.66H9.34V8.99h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.29zM5.32 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM3.54 20.45H7.1V8.99H3.54v11.46zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45C23.2 24 24 .77 24 1.72V22.28C24 23.23 23.2 24 22.22 24z"/>
+
+            </svg>
+
+          </a>
+
+
+          <a
+            href="mailto:pedroasilva.marketing@gmail.com"
+            aria-label="Email"
+            class="gmail-link"
+          >
+
+            <svg
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+
+              <path
+                fill="currentColor"
+                d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"
+              />
+
+            </svg>
+
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="footer-links">
+
+        <a href="/">
+          Início
+        </a>
+
+        <a href="/#servicos">
+          Serviços
+        </a>
+
+        <a href="/#processo">
+          Como trabalho
+        </a>
+
+        <a href="/blog.html">
+          Blog
+        </a>
+
+        <a href="/#sobre">
+          Sobre
+        </a>
+
+        <a href="/#faq">
+          FAQ
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <p class="footer-copy">
+      © 2026 Pedro Silva. Todos os direitos reservados.
+    </p>
+
+  </div>
+
+</footer>
+
+
+<script>
+
+/* =========================
+   HEADER SCROLL
+========================= */
+
+const header = document.getElementById('siteHeader');
+
+window.addEventListener(
+  'scroll',
+  () => {
+
+    header.classList.toggle(
+      'scrolled',
+      window.scrollY > 8
+    );
+
+  },
+  {
+    passive:true
+  }
+);
+
+
+/* =========================
+   MOBILE MENU
+========================= */
+
+const navToggle =
+  document.getElementById('navToggle');
+
+const navLinks =
+  document.getElementById('navLinks');
+
+
+navToggle.addEventListener(
+  'click',
+  () => {
+
+    const open =
+      navLinks.classList.toggle('open');
+
+    navToggle.setAttribute(
+      'aria-expanded',
+      open
+    );
+
+  }
+);
+
+
+navLinks
+  .querySelectorAll('a')
+  .forEach(
+    a => {
+
+      a.addEventListener(
+        'click',
+        () => {
+
+          navLinks.classList.remove('open');
+
+          navToggle.setAttribute(
+            'aria-expanded',
+            'false'
+          );
+
+        }
+      );
+
+    }
+  );
+
+
+/* =========================
+   SCROLL REVEAL
+========================= */
+
+const revealEls =
+  document.querySelectorAll(
+    '.reveal:not(.in)'
+  );
+
+
+const io =
+  new IntersectionObserver(
+    (entries) => {
+
+      entries.forEach(
+        entry => {
+
+          if(entry.isIntersecting){
+
+            entry.target.classList.add('in');
+
+            io.unobserve(entry.target);
+
+          }
+
+        }
+      );
+
+    },
+    {
+      threshold:.15,
+      rootMargin:'0px 0px -40px 0px'
+    }
+  );
+
+
+revealEls.forEach(
+  el => io.observe(el)
+);
+
+
+/* =========================
+   BLOG FILTERS
+========================= */
+
+const filterButtons =
+  document.querySelectorAll('.filter-btn');
+
+const articleCards =
+  document.querySelectorAll('.article-card');
+
+
+filterButtons.forEach(
+  button => {
+
+    button.addEventListener(
+      'click',
+      () => {
+
+        const filter =
+          button.dataset.filter;
+
+
+        filterButtons.forEach(
+          btn =>
+            btn.classList.remove('active')
+        );
+
+
+        button.classList.add('active');
+
+
+        articleCards.forEach(
+          card => {
+
+            const category =
+              card.dataset.category;
+
+
+            if(
+              filter === 'all' ||
+              category === filter
+            ){
+
+              card.style.display = '';
+
+            }else{
+
+              card.style.display = 'none';
+
+            }
+
+          }
+        );
+
+      }
+    );
+
+  }
+);
+
+</script>
+
+</body>
+</html>
