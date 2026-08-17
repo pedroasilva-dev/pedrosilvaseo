@@ -4,7 +4,6 @@
 <head>
 
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Blog de SEO e AI Search | Pedro Silva</title>
@@ -12,7 +11,6 @@
 <meta name="description" content="Guias e artigos sobre SEO Técnico, AI Search, GEO, Google AI Overviews, ChatGPT Search, SEO Internacional, Core Web Vitals e otimização para motores de pesquisa.">
 
 <meta name="author" content="Pedro Silva">
-
 <meta name="robots" content="index, follow">
 
 <link rel="canonical" href="https://pedrosilvaseo.vercel.app/blog.html">
@@ -22,31 +20,22 @@
 <!-- Open Graph -->
 
 <meta property="og:type" content="website">
-
 <meta property="og:title" content="Blog de SEO Técnico e AI Search | Pedro Silva">
-
 <meta property="og:description" content="Guias e estratégias sobre SEO Técnico, AI Search, GEO e pesquisa baseada em Inteligência Artificial.">
-
 <meta property="og:url" content="https://pedrosilvaseo.vercel.app/blog.html">
-
 <meta property="og:image" content="https://pedrosilvaseo.vercel.app/og-image.jpg">
-
 <meta property="og:locale" content="pt_PT">
 
 <!-- Twitter -->
 
 <meta name="twitter:card" content="summary_large_image">
-
 <meta name="twitter:title" content="Blog de SEO Técnico e AI Search | Pedro Silva">
-
 <meta name="twitter:description" content="Guias e estratégias sobre SEO Técnico, AI Search, GEO e pesquisa baseada em Inteligência Artificial.">
-
 <meta name="twitter:image" content="https://pedrosilvaseo.vercel.app/og-image.jpg">
 
 <!-- Fonts -->
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -93,27 +82,16 @@ gtag('config', 'G-3B8KSEMLFP');
 :root{
 
   --bg:#FFFFFF;
-
   --bg-secondary:#F8FAFC;
-
   --text:#111827;
-
   --text-muted:#64748B;
-
   --blue:#2563EB;
-
   --blue-dark:#1D4ED8;
-
   --blue-tint:#EFF4FE;
-
   --border:#E5E9F0;
-
   --red:#DC2626;
-
   --amber:#D97706;
-
   --radius:12px;
-
   --radius-lg:20px;
 
   --shadow:
@@ -131,9 +109,7 @@ gtag('config', 'G-3B8KSEMLFP');
 *{
 
   box-sizing:border-box;
-
   margin:0;
-
   padding:0;
 
 }
@@ -147,19 +123,13 @@ html{
 @media (prefers-reduced-motion: reduce){
 
   html{
-
     scroll-behavior:auto;
-
   }
 
   *{
-
     animation-duration:.001ms !important;
-
     animation-iteration-count:1 !important;
-
     transition-duration:.001ms !important;
-
   }
 
 }
@@ -167,15 +137,10 @@ html{
 body{
 
   font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
-
   color:var(--text);
-
   background:var(--bg);
-
   line-height:1.5;
-
   -webkit-font-smoothing:antialiased;
-
   font-feature-settings:"ss01" 1, "cv11" 1;
 
 }
@@ -189,7 +154,6 @@ body{
 img{
 
   max-width:100%;
-
   display:block;
 
 }
@@ -197,7 +161,6 @@ img{
 a{
 
   color:inherit;
-
   text-decoration:none;
 
 }
@@ -211,7 +174,6 @@ ul{
 button{
 
   font-family:inherit;
-
   cursor:pointer;
 
 }
@@ -219,9 +181,7 @@ button{
 .container{
 
   max-width:1120px;
-
   margin:0 auto;
-
   padding:0 24px;
 
 }
@@ -231,9 +191,7 @@ h2,
 h3{
 
   font-weight:800;
-
   letter-spacing:-0.02em;
-
   line-height:1.1;
 
 }
@@ -253,7 +211,6 @@ h2{
 h3{
 
   font-size:clamp(1.25rem,1vw + 1rem,1.75rem);
-
   font-weight:700;
 
 }
@@ -261,7 +218,6 @@ h3{
 p{
 
   font-size:1.0625rem;
-
   color:var(--text-muted);
 
 }
@@ -269,21 +225,13 @@ p{
 .eyebrow{
 
   display:inline-flex;
-
   align-items:center;
-
   gap:8px;
-
   font-size:.8125rem;
-
   font-weight:600;
-
   letter-spacing:.02em;
-
   color:var(--blue);
-
   text-transform:uppercase;
-
   margin-bottom:16px;
 
 }
@@ -291,15 +239,10 @@ p{
 .eyebrow::before{
 
   content:"";
-
   width:6px;
-
   height:6px;
-
   border-radius:50%;
-
   background:var(--blue);
-
   display:inline-block;
 
 }
@@ -313,9 +256,7 @@ section{
 @media(max-width:768px){
 
   section{
-
     padding:72px 0;
-
   }
 
 }
@@ -327,21 +268,13 @@ section{
 .btn{
 
   display:inline-flex;
-
   align-items:center;
-
   justify-content:center;
-
   gap:8px;
-
   padding:14px 24px;
-
   border-radius:10px;
-
   font-size:.9375rem;
-
   font-weight:600;
-
   border:1px solid transparent;
 
   transition:
@@ -357,7 +290,6 @@ section{
 .btn-primary{
 
   background:var(--blue);
-
   color:#fff;
 
   box-shadow:
@@ -369,7 +301,6 @@ section{
 .btn-primary:hover{
 
   background:var(--blue-dark);
-
   transform:translateY(-1px);
 
 }
@@ -377,9 +308,7 @@ section{
 .btn-secondary{
 
   background:#fff;
-
   color:var(--text);
-
   border-color:var(--border);
 
 }
@@ -387,9 +316,7 @@ section{
 .btn-secondary:hover{
 
   border-color:#CBD5E1;
-
   transform:translateY(-1px);
-
   box-shadow:var(--shadow);
 
 }
@@ -397,9 +324,7 @@ section{
 .btn-group{
 
   display:flex;
-
   gap:12px;
-
   flex-wrap:wrap;
 
 }
@@ -411,7 +336,6 @@ section{
 .reveal{
 
   opacity:0;
-
   transform:translateY(18px);
 
   transition:
@@ -423,7 +347,6 @@ section{
 .reveal.in{
 
   opacity:1;
-
   transform:none;
 
 }
@@ -459,19 +382,14 @@ section{
 header{
 
   position:fixed;
-
   top:0;
-
   left:0;
-
   right:0;
-
   z-index:100;
 
   background:rgba(255,255,255,.7);
 
   backdrop-filter:blur(10px);
-
   -webkit-backdrop-filter:blur(10px);
 
   border-bottom:1px solid transparent;
@@ -485,7 +403,6 @@ header{
 header.scrolled{
 
   border-bottom-color:var(--border);
-
   background:rgba(255,255,255,.85);
 
 }
@@ -493,11 +410,8 @@ header.scrolled{
 .nav{
 
   display:flex;
-
   align-items:center;
-
   justify-content:space-between;
-
   height:72px;
 
 }
@@ -505,9 +419,7 @@ header.scrolled{
 .brand{
 
   display:flex;
-
   flex-direction:column;
-
   line-height:1.15;
 
 }
@@ -515,9 +427,7 @@ header.scrolled{
 .brand strong{
 
   font-size:1rem;
-
   font-weight:700;
-
   letter-spacing:-0.01em;
 
 }
@@ -525,7 +435,6 @@ header.scrolled{
 .brand span{
 
   font-size:.75rem;
-
   color:var(--text-muted);
 
 }
@@ -533,9 +442,7 @@ header.scrolled{
 .nav-links{
 
   display:flex;
-
   align-items:center;
-
   gap:36px;
 
 }
@@ -543,11 +450,8 @@ header.scrolled{
 .nav-links a{
 
   font-size:.9375rem;
-
   font-weight:500;
-
   color:var(--text-muted);
-
   transition:color .2s var(--ease);
 
 }
@@ -561,9 +465,7 @@ header.scrolled{
 .nav-cta{
 
   display:flex;
-
   align-items:center;
-
   gap:16px;
 
 }
@@ -571,11 +473,8 @@ header.scrolled{
 .nav-toggle{
 
   display:none;
-
   background:none;
-
   border:none;
-
   padding:8px;
 
 }
@@ -583,7 +482,6 @@ header.scrolled{
 .nav-toggle svg{
 
   width:22px;
-
   height:22px;
 
 }
@@ -593,11 +491,8 @@ header.scrolled{
   .nav-links{
 
     position:absolute;
-
     top:72px;
-
     left:0;
-
     right:0;
 
     background:#fff;
@@ -605,15 +500,11 @@ header.scrolled{
     border-bottom:1px solid var(--border);
 
     flex-direction:column;
-
     align-items:flex-start;
-
     gap:0;
 
     max-height:0;
-
     overflow:hidden;
-
     opacity:0;
 
     transition:
@@ -625,7 +516,6 @@ header.scrolled{
   .nav-links.open{
 
     max-height:400px;
-
     opacity:1;
 
   }
@@ -633,9 +523,7 @@ header.scrolled{
   .nav-links a{
 
     padding:16px 24px;
-
     width:100%;
-
     border-bottom:1px solid var(--border);
 
   }
@@ -649,7 +537,6 @@ header.scrolled{
   .nav-cta .btn-primary{
 
     padding:10px 16px;
-
     font-size:.875rem;
 
   }
@@ -663,7 +550,6 @@ header.scrolled{
 .blog-hero{
 
   padding:170px 0 90px;
-
   background:var(--bg);
 
 }
@@ -683,7 +569,6 @@ header.scrolled{
 .blog-hero p{
 
   font-size:1.125rem;
-
   max-width:680px;
 
 }
@@ -695,11 +580,8 @@ header.scrolled{
 .blog-filters{
 
   display:flex;
-
   flex-wrap:wrap;
-
   gap:10px;
-
   margin-top:40px;
 
 }
@@ -707,17 +589,11 @@ header.scrolled{
 .filter-btn{
 
   padding:9px 16px;
-
   border-radius:999px;
-
   border:1px solid var(--border);
-
   background:#fff;
-
   color:var(--text-muted);
-
   font-size:.875rem;
-
   font-weight:600;
 
   transition:
@@ -731,9 +607,7 @@ header.scrolled{
 .filter-btn.active{
 
   background:var(--blue-tint);
-
   color:var(--blue);
-
   border-color:#BFDBFE;
 
 }
@@ -751,7 +625,6 @@ header.scrolled{
 .featured-slider{
 
   position:relative;
-
   overflow:hidden;
 
 }
@@ -759,7 +632,6 @@ header.scrolled{
 .featured-track{
 
   display:flex;
-
   transition:transform .6s var(--ease);
 
 }
@@ -773,17 +645,13 @@ header.scrolled{
 .featured-card{
 
   display:grid;
-
   grid-template-columns:1.1fr .9fr;
 
   border:1px solid var(--border);
-
   border-radius:var(--radius-lg);
 
   overflow:hidden;
-
   background:#fff;
-
   box-shadow:var(--shadow);
 
   transition:
@@ -795,7 +663,6 @@ header.scrolled{
 .featured-card:hover{
 
   transform:translateY(-3px);
-
   box-shadow:var(--shadow-lg);
 
 }
@@ -827,13 +694,9 @@ header.scrolled{
 .featured-meta{
 
   display:flex;
-
   align-items:center;
-
   gap:16px;
-
   font-size:.8125rem;
-
   color:var(--text-muted);
 
 }
@@ -841,13 +704,10 @@ header.scrolled{
 .featured-visual{
 
   background:#0B1120;
-
   min-height:360px;
 
   display:flex;
-
   align-items:center;
-
   justify-content:center;
 
   padding:40px;
@@ -857,15 +717,12 @@ header.scrolled{
 .ai-terminal{
 
   width:100%;
-
   max-width:400px;
 
   background:#0F172A;
 
   border:1px solid #1E293B;
-
   border-radius:14px;
-
   overflow:hidden;
 
   box-shadow:
@@ -876,9 +733,7 @@ header.scrolled{
 .ai-terminal-head{
 
   display:flex;
-
   align-items:center;
-
   gap:7px;
 
   padding:12px 16px;
@@ -890,9 +745,7 @@ header.scrolled{
 .ai-terminal-head span{
 
   width:9px;
-
   height:9px;
-
   border-radius:50%;
 
 }
@@ -920,11 +773,8 @@ header.scrolled{
   padding:22px;
 
   font-family:'JetBrains Mono',monospace;
-
   font-size:.75rem;
-
   color:#CBD5E1;
-
   line-height:1.9;
 
 }
@@ -956,7 +806,6 @@ header.scrolled{
 .category{
 
   display:inline-flex;
-
   align-items:center;
 
   padding:5px 10px;
@@ -968,11 +817,9 @@ header.scrolled{
   color:var(--blue);
 
   font-size:.75rem;
-
   font-weight:700;
 
   text-transform:uppercase;
-
   letter-spacing:.03em;
 
 }
@@ -984,13 +831,9 @@ header.scrolled{
 .featured-controls{
 
   display:flex;
-
   align-items:center;
-
   justify-content:center;
-
   gap:14px;
-
   margin-top:24px;
 
 }
@@ -998,21 +841,16 @@ header.scrolled{
 .slider-arrow{
 
   width:40px;
-
   height:40px;
 
   display:flex;
-
   align-items:center;
-
   justify-content:center;
 
   border:1px solid var(--border);
-
   border-radius:50%;
 
   background:#fff;
-
   color:var(--text);
 
   transition:
@@ -1025,11 +863,8 @@ header.scrolled{
 .slider-arrow:hover{
 
   background:var(--blue-tint);
-
   border-color:#BFDBFE;
-
   color:var(--blue);
-
   transform:translateY(-1px);
 
 }
@@ -1037,7 +872,6 @@ header.scrolled{
 .slider-arrow svg{
 
   width:18px;
-
   height:18px;
 
 }
@@ -1045,9 +879,7 @@ header.scrolled{
 .slider-dots{
 
   display:flex;
-
   align-items:center;
-
   gap:7px;
 
 }
@@ -1055,13 +887,10 @@ header.scrolled{
 .slider-dot{
 
   width:8px;
-
   height:8px;
 
   padding:0;
-
   border:0;
-
   border-radius:50%;
 
   background:#CBD5E1;
@@ -1075,9 +904,7 @@ header.scrolled{
 .slider-dot.active{
 
   width:22px;
-
   border-radius:999px;
-
   background:var(--blue);
 
 }
@@ -1095,9 +922,7 @@ header.scrolled{
 .articles-head{
 
   display:flex;
-
   justify-content:space-between;
-
   align-items:end;
 
   gap:30px;
@@ -1121,9 +946,7 @@ header.scrolled{
 .article-grid{
 
   display:grid;
-
   grid-template-columns:repeat(2,1fr);
-
   gap:20px;
 
 }
@@ -1131,7 +954,6 @@ header.scrolled{
 .article-card{
 
   border:1px solid var(--border);
-
   border-radius:var(--radius-lg);
 
   background:#fff;
@@ -1148,9 +970,7 @@ header.scrolled{
 .article-card:hover{
 
   border-color:#CBD5E1;
-
   box-shadow:var(--shadow-lg);
-
   transform:translateY(-3px);
 
 }
@@ -1164,7 +984,6 @@ header.scrolled{
 .article-card h3{
 
   font-size:1.35rem;
-
   margin-bottom:12px;
 
 }
@@ -1172,7 +991,6 @@ header.scrolled{
 .article-card p{
 
   font-size:.9375rem;
-
   margin-bottom:24px;
 
 }
@@ -1180,15 +998,12 @@ header.scrolled{
 .article-meta{
 
   display:flex;
-
   align-items:center;
-
   justify-content:space-between;
 
   gap:15px;
 
   font-size:.8125rem;
-
   color:var(--text-muted);
 
 }
@@ -1196,15 +1011,12 @@ header.scrolled{
 .read-more{
 
   display:inline-flex;
-
   align-items:center;
-
   gap:7px;
 
   color:var(--blue);
 
   font-size:.875rem;
-
   font-weight:600;
 
 }
@@ -1212,7 +1024,6 @@ header.scrolled{
 .read-more svg{
 
   width:16px;
-
   height:16px;
 
   transition:transform .2s var(--ease);
@@ -1238,9 +1049,7 @@ header.scrolled{
 .topics-grid{
 
   display:grid;
-
   grid-template-columns:repeat(3,1fr);
-
   gap:20px;
 
 }
@@ -1250,7 +1059,6 @@ header.scrolled{
   padding:28px;
 
   border:1px solid var(--border);
-
   border-radius:var(--radius-lg);
 
   background:#fff;
@@ -1260,7 +1068,6 @@ header.scrolled{
 .topic-card h3{
 
   font-size:1.2rem;
-
   margin-bottom:10px;
 
 }
@@ -1284,11 +1091,9 @@ header.scrolled{
 .section-head.center{
 
   text-align:center;
-
   max-width:700px;
 
   margin-left:auto;
-
   margin-right:auto;
 
 }
@@ -1312,7 +1117,6 @@ header.scrolled{
 .cta-final{
 
   background:var(--text);
-
   color:#fff;
 
   border-radius:var(--radius-lg);
@@ -1326,7 +1130,6 @@ header.scrolled{
 .cta-final h2{
 
   color:#fff;
-
   margin-bottom:16px;
 
 }
@@ -1352,9 +1155,7 @@ header.scrolled{
 .cta-final .btn-secondary{
 
   background:transparent;
-
   color:#fff;
-
   border-color:#334155;
 
 }
@@ -1372,7 +1173,6 @@ header.scrolled{
 footer{
 
   border-top:1px solid var(--border);
-
   padding:48px 0;
 
 }
@@ -1380,9 +1180,7 @@ footer{
 .footer-row{
 
   display:flex;
-
   align-items:center;
-
   justify-content:space-between;
 
   flex-wrap:wrap;
@@ -1396,7 +1194,6 @@ footer{
   display:block;
 
   font-size:.875rem;
-
   color:var(--text-muted);
 
   margin-top:2px;
@@ -1406,9 +1203,7 @@ footer{
 .footer-links{
 
   display:flex;
-
   gap:28px;
-
   flex-wrap:wrap;
 
 }
@@ -1416,7 +1211,6 @@ footer{
 .footer-links a{
 
   font-size:.875rem;
-
   color:var(--text-muted);
 
   transition:color .2s var(--ease);
@@ -1432,9 +1226,7 @@ footer{
 .footer-copy{
 
   font-size:.8125rem;
-
   color:#94A3B8;
-
   margin-top:28px;
 
 }
@@ -1442,11 +1234,8 @@ footer{
 .footer-social{
 
   display:flex;
-
   align-items:center;
-
   gap:12px;
-
   margin-top:20px;
 
 }
@@ -1457,15 +1246,12 @@ footer{
   display:inline-flex;
 
   align-items:center;
-
   justify-content:center;
 
   width:40px;
-
   height:40px;
 
   border:1px solid var(--border);
-
   border-radius:10px;
 
   color:var(--text-muted);
@@ -1481,11 +1267,8 @@ footer{
 .linkedin-link:hover{
 
   color:var(--blue);
-
   border-color:var(--blue);
-
   background:var(--blue-tint);
-
   transform:translateY(-2px);
 
 }
@@ -1493,11 +1276,8 @@ footer{
 .gmail-link:hover{
 
   color:var(--red);
-
   border-color:var(--red);
-
   background:#FEF2F2;
-
   transform:translateY(-2px);
 
 }
@@ -1505,9 +1285,7 @@ footer{
 .linkedin-link svg{
 
   width:20px;
-
   height:20px;
-
   fill:currentColor;
 
 }
@@ -1515,7 +1293,6 @@ footer{
 .gmail-link svg{
 
   width:21px;
-
   height:21px;
 
 }
@@ -1523,9 +1300,7 @@ footer{
 :focus-visible{
 
   outline:2px solid var(--blue);
-
   outline-offset:3px;
-
   border-radius:4px;
 
 }
@@ -1685,9 +1460,7 @@ footer{
         >
 
           <line x1="3" y1="6" x2="21" y2="6"/>
-
           <line x1="3" y1="12" x2="21" y2="12"/>
-
           <line x1="3" y1="18" x2="21" y2="18"/>
 
         </svg>
@@ -1742,6 +1515,22 @@ footer{
           type="button"
         >
           AI Search
+        </button>
+
+        <button
+          class="filter-btn"
+          data-filter="geo"
+          type="button"
+        >
+          GEO
+        </button>
+
+        <button
+          class="filter-btn"
+          data-filter="technical"
+          type="button"
+        >
+          SEO Técnico
         </button>
 
       </div>
@@ -1820,9 +1609,7 @@ footer{
                 <div class="ai-terminal-head">
 
                   <span></span>
-
                   <span></span>
-
                   <span></span>
 
                 </div>
@@ -1913,9 +1700,7 @@ footer{
                 <div class="ai-terminal-head">
 
                   <span></span>
-
                   <span></span>
-
                   <span></span>
 
                 </div>
@@ -2006,9 +1791,7 @@ footer{
                 <div class="ai-terminal-head">
 
                   <span></span>
-
                   <span></span>
-
                   <span></span>
 
                 </div>
@@ -2037,6 +1820,97 @@ footer{
 
                   <span class="ai-terminal-line blue">
                     &gt; SEO foundation: improve
+                  </span>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </a>
+
+        </div>
+
+        <!-- =========================
+             SLIDE 4 — GEO
+        ========================= -->
+
+        <div class="featured-slide">
+
+          <a
+            href="/blog/o-que-e-geo.html"
+            class="featured-card"
+          >
+
+            <div class="featured-content">
+
+              <span class="category">
+                GEO
+              </span>
+
+              <h2>
+                O Que é GEO? Guia de Generative Engine Optimization
+              </h2>
+
+              <p>
+                Descubra o que é GEO, como funciona a otimização
+                para motores de resposta generativos e como aumentar
+                a visibilidade de um website em ChatGPT, Google AI e Gemini.
+              </p>
+
+              <div class="featured-meta">
+
+                <span>
+                  8 min de leitura
+                </span>
+
+                <span>·</span>
+
+                <span>
+                  Guia completo
+                </span>
+
+              </div>
+
+            </div>
+
+            <div class="featured-visual">
+
+              <div class="ai-terminal">
+
+                <div class="ai-terminal-head">
+
+                  <span></span>
+                  <span></span>
+                  <span></span>
+
+                </div>
+
+                <div class="ai-terminal-body">
+
+                  <span class="ai-terminal-line blue">
+                    &gt; Generative Engine Optimization
+                  </span>
+
+                  <span class="ai-terminal-line">
+                    query: SEO consultant
+                  </span>
+
+                  <span class="ai-terminal-line green">
+                    ✓ content: relevant
+                  </span>
+
+                  <span class="ai-terminal-line green">
+                    ✓ entities: identified
+                  </span>
+
+                  <span class="ai-terminal-line yellow">
+                    ⚠ authority: strengthen
+                  </span>
+
+                  <span class="ai-terminal-line blue">
+                    &gt; GEO visibility: improve
                   </span>
 
                 </div>
@@ -2102,6 +1976,13 @@ footer{
             type="button"
           ></button>
 
+          <button
+            class="slider-dot"
+            data-slide="3"
+            aria-label="Ir para o artigo O Que é GEO"
+            type="button"
+          ></button>
+
         </div>
 
         <button
@@ -2156,7 +2037,6 @@ footer{
 
       </div>
 
-      
     </div>
 
     <div
@@ -2351,6 +2231,69 @@ footer{
 
       </article>
 
+      <!-- =========================
+           ARTICLE 4 — GEO
+      ========================= -->
+
+      <article
+        class="article-card reveal"
+        data-category="geo"
+      >
+
+        <span class="category">
+          GEO
+        </span>
+
+        <h3>
+          O Que é GEO? Guia de Generative Engine Optimization
+        </h3>
+
+        <p>
+          Descubra o que é GEO, como funciona a otimização para
+          motores de resposta generativos e como aumentar a
+          visibilidade de um website em ferramentas de IA.
+        </p>
+
+        <div class="article-meta">
+
+          <span>
+            8 min de leitura
+          </span>
+
+          <a
+            href="/blog/o-que-e-geo.html"
+            class="read-more"
+          >
+
+            Ler artigo
+
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            >
+
+              <line
+                x1="5"
+                y1="12"
+                x2="19"
+                y2="12"
+              />
+
+              <polyline
+                points="12 5 19 12 12 19"
+              />
+
+            </svg>
+
+          </a>
+
+        </div>
+
+      </article>
+
     </div>
 
   </div>
@@ -2398,13 +2341,33 @@ footer{
 
         <p>
           AI Search, Google AI Overviews, AI Mode,
-          ChatGPT Search, GEO e otimização para motores
+          ChatGPT Search e otimização para motores
           generativos.
         </p>
 
       </div>
 
       <!-- TOPIC 2 -->
+
+      <div class="topic-card reveal">
+
+        <span class="category">
+          GEO
+        </span>
+
+        <h3>
+          Generative Engine Optimization
+        </h3>
+
+        <p>
+          GEO, visibilidade em motores generativos,
+          respostas de IA, entidades, autoridade
+          e otimização de conteúdo para sistemas de IA.
+        </p>
+
+      </div>
+
+      <!-- TOPIC 3 -->
 
       <div class="topic-card reveal">
 
@@ -2419,25 +2382,6 @@ footer{
         <p>
           Crawling, indexação, Core Web Vitals, Schema,
           JavaScript SEO, canonicals, robots.txt e sitemaps.
-        </p>
-
-      </div>
-
-      <!-- TOPIC 3 -->
-
-      <div class="topic-card reveal">
-
-        <span class="category">
-          SEO Internacional
-        </span>
-
-        <h3>
-          Websites internacionais
-        </h3>
-
-        <p>
-          Hreflang, arquitetura internacional, localização
-          e estratégias técnicas para múltiplos mercados.
         </p>
 
       </div>
@@ -2702,7 +2646,6 @@ const io =
     },
     {
       threshold:.15,
-
       rootMargin:'0px 0px -40px 0px'
     }
   );
