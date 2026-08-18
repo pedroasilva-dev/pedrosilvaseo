@@ -15,6 +15,10 @@
 
 <link rel="canonical" href="https://pedrosilvaseo.vercel.app/blog/o-que-e-geo.html">
 
+<link rel="alternate" hreflang="pt-PT" href="https://pedrosilvaseo.vercel.app/blog/o-que-e-geo.html">
+<link rel="alternate" hreflang="en" href="https://pedrosilvaseo.vercel.app/en/blog/o-que-e-geo.html">
+<link rel="alternate" hreflang="x-default" href="https://pedrosilvaseo.vercel.app/blog/o-que-e-geo.html">
+
 <link rel="icon" type="image/svg+xml" href="/favicon-ps.svg">
 
 <meta property="og:type" content="article">
@@ -46,6 +50,7 @@
   "url": "https://pedrosilvaseo.vercel.app/blog/o-que-e-geo.html",
   "datePublished": "2026-08-17",
   "dateModified": "2026-08-17",
+  "inLanguage": "pt-PT",
   "author": {
     "@type": "Person",
     "name": "Pedro Silva",
@@ -302,6 +307,78 @@ header {
   width: 22px;
 }
 
+/* LANGUAGE SWITCHER */
+
+.language-switcher {
+  position: relative;
+  margin-left: 4px;
+}
+
+.language-current {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 7px 9px;
+  border: 0;
+  background: transparent;
+  color: var(--text-muted);
+  font-size: .85rem;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.language-current:hover {
+  color: var(--text);
+  background: var(--bg-secondary);
+}
+
+.language-current svg {
+  width: 13px;
+  height: 13px;
+  transition: transform .2s ease;
+}
+
+.language-switcher.open .language-current svg {
+  transform: rotate(180deg);
+}
+
+.language-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  min-width: 80px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  padding: 5px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-5px);
+  transition: .2s ease;
+}
+
+.language-switcher.open .language-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.language-dropdown a {
+  display: block;
+  padding: 8px 10px;
+  border-radius: 7px;
+  color: var(--text-muted);
+  font-size: .85rem;
+  font-weight: 600;
+}
+
+.language-dropdown a:hover {
+  color: var(--text);
+  background: var(--bg-secondary);
+}
+
 @media (max-width: 860px) {
 
   .nav-links {
@@ -322,7 +399,7 @@ header {
   }
 
   .nav-links.open {
-    max-height: 500px;
+    max-height: 600px;
     opacity: 1;
   }
 
@@ -330,6 +407,17 @@ header {
     width: 100%;
     padding: 16px 24px;
     border-bottom: 1px solid var(--border);
+  }
+
+  .language-switcher {
+    margin: 0;
+    position: absolute;
+    right: 62px;
+    top: 18px;
+  }
+
+  .language-dropdown {
+    right: 0;
   }
 
   .nav-toggle {
@@ -680,7 +768,47 @@ footer {
 
 <div class="nav-cta">
 
-<a href="/#contacto" class="btn btn-primary">Contacto</a>
+<!-- LANGUAGE SWITCHER -->
+
+<div class="language-switcher" id="languageSwitcher">
+
+<button
+  class="language-current"
+  id="languageCurrent"
+  type="button"
+  aria-expanded="false"
+  aria-haspopup="true"
+>
+
+  PT
+
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  >
+    <polyline points="6 9 12 15 18 9"></polyline>
+  </svg>
+
+</button>
+
+<div class="language-dropdown">
+
+<a href="/en/blog/o-que-e-geo.html" lang="en">
+  EN
+</a>
+
+</div>
+
+</div>
+
+
+<a href="/#contacto" class="btn btn-primary">
+Contacto
+</a>
 
 <button
   class="nav-toggle"
@@ -689,10 +817,18 @@ footer {
   aria-expanded="false"
   type="button">
 
-<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+<svg
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+>
+
 <line x1="3" y1="6" x2="21" y2="6"/>
 <line x1="3" y1="12" x2="21" y2="12"/>
 <line x1="3" y1="18" x2="21" y2="18"/>
+
 </svg>
 
 </button>
@@ -713,9 +849,13 @@ footer {
 
 <div class="article-header">
 
-<span class="category">AI Search / GEO</span>
+<span class="category">
+AI Search / GEO
+</span>
 
-<h1>GEO: O Que é Generative Engine Optimization?</h1>
+<h1>
+GEO: O Que é Generative Engine Optimization?
+</h1>
 
 <p class="article-intro">
 Descubra o que é GEO, como se relaciona com SEO e quais as principais práticas para aumentar a visibilidade de conteúdos em AI Search e respostas generativas.
@@ -759,7 +899,9 @@ A pesquisa está a deixar de ser apenas uma lista de páginas ordenadas por posi
 </div>
 
 
-<h2 id="o-que-e-geo">O que é GEO?</h2>
+<h2 id="o-que-e-geo">
+O que é GEO?
+</h2>
 
 <p>
 <strong>GEO significa Generative Engine Optimization.</strong> O conceito procura melhorar a probabilidade de uma marca ou página ser encontrada, utilizada ou citada em respostas produzidas por sistemas de pesquisa generativos.
@@ -774,7 +916,9 @@ Isso muda a pergunta de “em que posição está a minha página?” para pergu
 </p>
 
 
-<h2 id="geo-vs-seo">GEO é o mesmo que SEO?</h2>
+<h2 id="geo-vs-seo">
+GEO é o mesmo que SEO?
+</h2>
 
 <p>
 Não. GEO e SEO estão relacionados, mas não são sinónimos.
@@ -818,25 +962,33 @@ Não existe um conjunto universal de “truques GEO” que garanta citações em
 A melhor abordagem é combinar fundamentos de SEO com conteúdo que seja claro, factual, bem estruturado e fácil de interpretar.
 </p>
 
-<h3>Respostas claras</h3>
+<h3>
+Respostas claras
+</h3>
 
 <p>
 Começa cada secção com uma resposta direta ao problema que o leitor quer resolver. Definições, passos, comparações e explicações objetivas são mais fáceis de interpretar do que texto excessivamente vago.
 </p>
 
-<h3>Profundidade temática</h3>
+<h3>
+Profundidade temática
+</h3>
 
 <p>
 Cobre o tema de forma completa e liga conceitos relacionados. Um único artigo superficial dificilmente demonstra a mesma profundidade que um conjunto coerente de páginas interligadas.
 </p>
 
-<h3>Informação verificável</h3>
+<h3>
+Informação verificável
+</h3>
 
 <p>
 Usa dados, exemplos, referências e factos que possam ser confirmados. A confiança é especialmente importante quando uma resposta de IA precisa de selecionar fontes.
 </p>
 
-<h3>Estrutura semântica</h3>
+<h3>
+Estrutura semântica
+</h3>
 
 <p>
 Usa headings claros, parágrafos bem definidos, listas, tabelas quando fizer sentido e HTML que represente corretamente a estrutura da informação.
@@ -940,37 +1092,49 @@ O valor do Schema está em complementar a clareza da informação, não em tenta
 Como otimizar um website para GEO
 </h2>
 
-<h3>1. Começa pelos fundamentos de SEO</h3>
+<h3>
+1. Começa pelos fundamentos de SEO
+</h3>
 
 <p>
 Resolve problemas de crawling, indexação, canonicals, arquitetura, performance e internal linking.
 </p>
 
-<h3>2. Cria páginas que respondam a perguntas reais</h3>
+<h3>
+2. Cria páginas que respondam a perguntas reais
+</h3>
 
 <p>
 Estrutura conteúdos em torno da intenção do utilizador e responde de forma direta antes de aprofundar o tema.
 </p>
 
-<h3>3. Constrói clusters temáticos</h3>
+<h3>
+3. Constrói clusters temáticos
+</h3>
 
 <p>
 Cria uma página principal sobre um tema e conteúdos complementares que aprofundem subtemas relevantes.
 </p>
 
-<h3>4. Torna a informação fácil de extrair</h3>
+<h3>
+4. Torna a informação fácil de extrair
+</h3>
 
 <p>
 Usa definições claras, passos, listas, comparações, dados e exemplos. Evita esconder informação importante em elementos difíceis de interpretar.
 </p>
 
-<h3>5. Demonstra experiência e autoridade</h3>
+<h3>
+5. Demonstra experiência e autoridade
+</h3>
 
 <p>
 Explica quem está por trás do conteúdo, usa fontes quando necessário e acrescenta conhecimento original.
 </p>
 
-<h3>6. Trabalha a presença fora do teu próprio site</h3>
+<h3>
+6. Trabalha a presença fora do teu próprio site
+</h3>
 
 <p>
 Em muitos contextos de AI Search, a informação disponível fora do domínio da marca também pode influenciar o contexto em que essa marca é compreendida. A investigação recente sugere diferenças relevantes entre motores e uma importância significativa de fontes de terceiros em determinados ambientes, pelo que uma estratégia de GEO deve considerar também autoridade externa.
@@ -1003,12 +1167,14 @@ Erros comuns em GEO
 </h2>
 
 <ul>
+
 <li>Tratar GEO como substituto de SEO.</li>
 <li>Criar centenas de páginas genéricas com IA sem valor original.</li>
 <li>Repetir keywords de forma artificial.</li>
 <li>Acreditar que existe um único prompt ou técnica que garante citações.</li>
 <li>Ignorar Technical SEO, indexação e internal linking.</li>
 <li>Medir apenas menções e não os resultados de negócio.</li>
+
 </ul>
 
 
@@ -1056,7 +1222,9 @@ Perguntas frequentes
 
 <div class="faq-item">
 
-<h3>O que é GEO?</h3>
+<h3>
+O que é GEO?
+</h3>
 
 <p>
 GEO, ou Generative Engine Optimization, é a otimização da visibilidade de conteúdos em respostas produzidas por sistemas de pesquisa generativos e AI Search.
@@ -1067,7 +1235,9 @@ GEO, ou Generative Engine Optimization, é a otimização da visibilidade de con
 
 <div class="faq-item">
 
-<h3>GEO substitui SEO?</h3>
+<h3>
+GEO substitui SEO?
+</h3>
 
 <p>
 Não. GEO e SEO são complementares. Os fundamentos de Technical SEO, conteúdo, relevância, arquitetura e autoridade continuam a ser importantes.
@@ -1078,7 +1248,9 @@ Não. GEO e SEO são complementares. Os fundamentos de Technical SEO, conteúdo,
 
 <div class="faq-item">
 
-<h3>Como fazer GEO?</h3>
+<h3>
+Como fazer GEO?
+</h3>
 
 <p>
 Começa pelos fundamentos de SEO, cria conteúdo útil e original, melhora o contexto semântico, estrutura a informação de forma clara, constrói autoridade e mede a visibilidade em diferentes ambientes.
@@ -1089,7 +1261,9 @@ Começa pelos fundamentos de SEO, cria conteúdo útil e original, melhora o con
 
 <div class="faq-item">
 
-<h3>O Schema Markup garante presença em respostas de IA?</h3>
+<h3>
+O Schema Markup garante presença em respostas de IA?
+</h3>
 
 <p>
 Não. Pode ajudar os motores de pesquisa a compreender informação estruturada, mas não existe um Schema especial que garanta presença em respostas de IA.
@@ -1100,17 +1274,24 @@ Não. Pode ajudar os motores de pesquisa a compreender informação estruturada,
 </div>
 
 
-<!-- Related Articles -->
+<!-- RELATED -->
 
 <div class="related">
 
-<h2>Continua a ler</h2>
+<h2>
+Continua a ler
+</h2>
 
 <div class="related-grid">
 
-<a href="/blog/como-aparecer-nos-llms.html" class="related-card">
+<a
+  href="/blog/como-aparecer-nos-llms.html"
+  class="related-card"
+>
 
-<span>AI Search</span>
+<span>
+AI Search
+</span>
 
 <h3>
 Como Aparecer nos LLMs? Como Otimizar o Seu Site para AI
@@ -1119,9 +1300,14 @@ Como Aparecer nos LLMs? Como Otimizar o Seu Site para AI
 </a>
 
 
-<a href="/blog/google-ai-mode.html" class="related-card">
+<a
+  href="/blog/google-ai-mode.html"
+  class="related-card"
+>
 
-<span>AI Search</span>
+<span>
+AI Search
+</span>
 
 <h3>
 Google AI Mode: O Que Muda para o SEO?
@@ -1146,7 +1332,10 @@ Queres aumentar a visibilidade do teu site em AI Search?
 Uma estratégia de SEO técnico e AI Search pode identificar oportunidades para melhorar descoberta, contexto, autoridade e presença orgânica.
 </p>
 
-<a href="/auditoria.html" class="btn btn-primary">
+<a
+  href="/auditoria.html"
+  class="btn btn-primary"
+>
 Solicitar uma auditoria
 </a>
 
@@ -1156,17 +1345,23 @@ Solicitar uma auditoria
 </article>
 
 
-<!-- Sidebar -->
+<!-- SIDEBAR -->
 
 <aside class="article-sidebar">
 
 <div class="toc">
 
-<strong>Neste artigo</strong>
+<strong>
+Neste artigo
+</strong>
 
-<a href="#o-que-e-geo">O que é GEO?</a>
+<a href="#o-que-e-geo">
+O que é GEO?
+</a>
 
-<a href="#geo-vs-seo">GEO vs SEO</a>
+<a href="#geo-vs-seo">
+GEO vs SEO
+</a>
 
 <a href="#como-funcionam-os-motores-generativos">
 Como funcionam os motores generativos?
@@ -1242,7 +1437,9 @@ Perguntas frequentes
 
 <div class="footer-brand">
 
-<strong>Pedro Silva</strong>
+<strong>
+Pedro Silva
+</strong>
 
 <span>
 Technical SEO & AI Search Consultant
@@ -1253,15 +1450,25 @@ Technical SEO & AI Search Consultant
 
 <div class="footer-links">
 
-<a href="/">Início</a>
+<a href="/">
+Início
+</a>
 
-<a href="/#servicos">Serviços</a>
+<a href="/#servicos">
+Serviços
+</a>
 
-<a href="/#sobre">Sobre</a>
+<a href="/#sobre">
+Sobre
+</a>
 
-<a href="/blog.html">Blog</a>
+<a href="/blog.html">
+Blog
+</a>
 
-<a href="/#faq">FAQ</a>
+<a href="/#faq">
+FAQ
+</a>
 
 </div>
 
@@ -1286,7 +1493,10 @@ navToggle.addEventListener('click', () => {
 
   const open = navLinks.classList.toggle('open');
 
-  navToggle.setAttribute('aria-expanded', open);
+  navToggle.setAttribute(
+    'aria-expanded',
+    open
+  );
 
 });
 
@@ -1296,9 +1506,51 @@ navLinks.querySelectorAll('a').forEach(link => {
 
     navLinks.classList.remove('open');
 
-    navToggle.setAttribute('aria-expanded', 'false');
+    navToggle.setAttribute(
+      'aria-expanded',
+      'false'
+    );
 
   });
+
+});
+
+
+/* LANGUAGE SWITCHER */
+
+const languageSwitcher =
+  document.getElementById('languageSwitcher');
+
+const languageCurrent =
+  document.getElementById('languageCurrent');
+
+languageCurrent.addEventListener('click', (event) => {
+
+  event.stopPropagation();
+
+  const open =
+    languageSwitcher.classList.toggle('open');
+
+  languageCurrent.setAttribute(
+    'aria-expanded',
+    open
+  );
+
+});
+
+
+document.addEventListener('click', (event) => {
+
+  if (!languageSwitcher.contains(event.target)) {
+
+    languageSwitcher.classList.remove('open');
+
+    languageCurrent.setAttribute(
+      'aria-expanded',
+      'false'
+    );
+
+  }
 
 });
 

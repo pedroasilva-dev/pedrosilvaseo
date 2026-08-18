@@ -15,6 +15,10 @@
 
 <link rel="canonical" href="https://pedrosilvaseo.vercel.app/blog/google-ai-mode.html">
 
+<link rel="alternate" hreflang="pt-PT" href="https://pedrosilvaseo.vercel.app/blog/google-ai-mode.html">
+<link rel="alternate" hreflang="en" href="https://pedrosilvaseo.vercel.app/en/blog/google-ai-mode.html">
+<link rel="alternate" hreflang="x-default" href="https://pedrosilvaseo.vercel.app/blog/google-ai-mode.html">
+
 <link rel="icon" type="image/svg+xml" href="/favicon-ps.svg">
 
 <!-- Open Graph -->
@@ -25,6 +29,7 @@
 <meta property="og:url" content="https://pedrosilvaseo.vercel.app/blog/google-ai-mode.html">
 <meta property="og:image" content="https://pedrosilvaseo.vercel.app/og-image.jpg">
 <meta property="og:locale" content="pt_PT">
+<meta property="og:locale:alternate" content="en_US">
 
 <!-- Twitter -->
 
@@ -40,7 +45,7 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-<!-- Schema -->
+<!-- Schema: Article -->
 
 <script type="application/ld+json">
 {
@@ -49,6 +54,7 @@
   "headline": "Google AI Mode: O Que Muda para o SEO?",
   "description": "Descubra o que é o Google AI Mode, como funciona e o que pode mudar para o SEO, rankings e visibilidade orgânica dos websites.",
   "url": "https://pedrosilvaseo.vercel.app/blog/google-ai-mode.html",
+  "inLanguage": "pt-PT",
   "datePublished": "2026-08-15",
   "dateModified": "2026-08-15",
   "author": {
@@ -66,6 +72,8 @@
   }
 }
 </script>
+
+<!-- Schema: Breadcrumb -->
 
 <script type="application/ld+json">
 {
@@ -100,7 +108,7 @@
 }
 </script>
 
-<!-- FAQ Schema -->
+<!-- Schema: FAQ -->
 
 <script type="application/ld+json">
 {
@@ -294,6 +302,76 @@ header {
   width: 22px;
 }
 
+/* LANGUAGE SWITCHER */
+
+.language-switcher {
+  position: relative;
+  margin-left: 5px;
+}
+
+.language-current {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  border: 0;
+  background: transparent;
+  color: var(--text-muted);
+  font-family: inherit;
+  font-size: .85rem;
+  font-weight: 600;
+  padding: 8px 4px;
+  cursor: pointer;
+}
+
+.language-current:hover {
+  color: var(--text);
+}
+
+.language-arrow {
+  font-size: .7rem;
+  transition: transform .2s ease;
+}
+
+.language-switcher.open .language-arrow {
+  transform: rotate(180deg);
+}
+
+.language-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  min-width: 70px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  padding: 6px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-5px);
+  transition: .2s ease;
+}
+
+.language-switcher.open .language-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.language-dropdown a {
+  display: block;
+  padding: 8px 10px;
+  border-radius: 7px;
+  color: var(--text-muted);
+  font-size: .85rem;
+  font-weight: 600;
+}
+
+.language-dropdown a:hover {
+  background: var(--bg-secondary);
+  color: var(--text);
+}
+
 @media (max-width: 860px) {
 
   .nav-links {
@@ -331,6 +409,11 @@ header {
   .nav-cta .btn {
     display: none;
   }
+
+  .language-switcher {
+    margin-left: 0;
+  }
+
 }
 
 /* ARTICLE HERO */
@@ -675,16 +758,47 @@ footer {
 <nav class="nav-links" id="navLinks">
 
   <a href="/">Início</a>
+
   <a href="/#servicos">Serviços</a>
+
   <a href="/#processo">Como trabalho</a>
+
   <a href="/#ferramentas">Ferramentas</a>
+
   <a href="/#sobre">Sobre</a>
+
   <a href="/blog.html">Blog</a>
+
   <a href="/#faq">FAQ</a>
 
 </nav>
 
 <div class="nav-cta">
+
+  <!-- LANGUAGE SWITCHER -->
+
+  <div class="language-switcher" id="languageSwitcher">
+
+    <button
+      class="language-current"
+      id="languageCurrent"
+      type="button"
+      aria-haspopup="true"
+      aria-expanded="false"
+    >
+      PT
+      <span class="language-arrow">▼</span>
+    </button>
+
+    <div class="language-dropdown">
+
+      <a href="/en/blog/google-ai-mode.html">
+        EN
+      </a>
+
+    </div>
+
+  </div>
 
   <a href="/#contacto" class="btn btn-primary">
     Contacto
@@ -1362,6 +1476,8 @@ footer {
 
 <script>
 
+/* MOBILE MENU */
+
 const navToggle = document.getElementById('navToggle');
 const navLinks = document.getElementById('navLinks');
 
@@ -1375,6 +1491,8 @@ navToggle.addEventListener('click', () => {
   );
 
 });
+
+/* CLOSE MOBILE MENU */
 
 navLinks
   .querySelectorAll('a')
@@ -1392,6 +1510,45 @@ navLinks
     });
 
   });
+
+/* LANGUAGE SWITCHER */
+
+const languageSwitcher =
+  document.getElementById('languageSwitcher');
+
+const languageCurrent =
+  document.getElementById('languageCurrent');
+
+languageCurrent.addEventListener('click', (event) => {
+
+  event.stopPropagation();
+
+  const open =
+    languageSwitcher.classList.toggle('open');
+
+  languageCurrent.setAttribute(
+    'aria-expanded',
+    open
+  );
+
+});
+
+/* CLOSE LANGUAGE DROPDOWN */
+
+document.addEventListener('click', (event) => {
+
+  if (!languageSwitcher.contains(event.target)) {
+
+    languageSwitcher.classList.remove('open');
+
+    languageCurrent.setAttribute(
+      'aria-expanded',
+      'false'
+    );
+
+  }
+
+});
 
 </script>
 
