@@ -1,39 +1,20 @@
 <!DOCTYPE html>
-<html lang="pt-PT">
+<html lang="en">
 
 <head>
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Consultoria SEO & GEO | Pedro Silva</title>
+  <title>SEO & GEO Consulting | Pedro Silva</title>
 
-  <meta name="description" content="Solicite uma auditoria SEO ou GEO para identificar problemas técnicos, oportunidades de otimização e fatores que podem estar a limitar a visibilidade do seu website.">
+  <meta name="description" content="Request an SEO or GEO audit to identify technical issues, optimization opportunities and factors limiting your website's organic visibility.">
 
-  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://pedrosilvaseo.vercel.app/en/audit.html">
 
-  <!-- Canonical -->
-  <link rel="canonical" href="https://pedrosilvaseo.vercel.app/auditoria.html">
-
-  <!-- Hreflang -->
   <link rel="alternate" hreflang="pt-PT" href="https://pedrosilvaseo.vercel.app/auditoria.html">
-  <link rel="alternate" hreflang="en" href="https://pedrosilvaseo.vercel.app/en/auditoria.html">
+  <link rel="alternate" hreflang="en" href="https://pedrosilvaseo.vercel.app/en/audit.html">
   <link rel="alternate" hreflang="x-default" href="https://pedrosilvaseo.vercel.app/auditoria.html">
-
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3B8KSEMLFP"></script>
-
-  <script>
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag(){
-      dataLayer.push(arguments);
-    }
-
-    gtag('js', new Date());
-
-    gtag('config', 'G-3B8KSEMLFP');
-  </script>
 
   <style>
 
@@ -155,24 +136,24 @@
       box-shadow:0 1px 2px rgba(37,99,235,.15), 0 14px 28px -10px rgba(37,99,235,.55);
     }
 
-    /* Language selector */
+    /* LANGUAGE SWITCHER */
 
-    .language-selector{
+    .language-switcher{
       position:relative;
     }
 
     .language-button{
-      background:none;
-      border:none;
-      padding:6px 2px;
-      color:var(--text-muted);
-      font-family:inherit;
-      font-size:.875rem;
-      font-weight:600;
-      cursor:pointer;
       display:flex;
       align-items:center;
-      gap:5px;
+      gap:6px;
+      background:none;
+      border:0;
+      padding:6px 0;
+      color:var(--text-muted);
+      font-family:inherit;
+      font-size:.9375rem;
+      font-weight:500;
+      cursor:pointer;
     }
 
     .language-button:hover{
@@ -184,20 +165,20 @@
       transition:transform .2s ease;
     }
 
-    .language-selector.open .language-arrow{
+    .language-switcher.open .language-arrow{
       transform:rotate(180deg);
     }
 
     .language-dropdown{
       position:absolute;
-      top:calc(100% + 10px);
+      top:calc(100% + 8px);
       right:0;
       min-width:70px;
       background:#fff;
       border:1px solid var(--border);
-      border-radius:8px;
-      box-shadow:0 10px 30px rgba(17,24,39,.12);
-      padding:5px;
+      border-radius:10px;
+      box-shadow:0 10px 30px rgba(17,24,39,.10);
+      padding:6px;
       opacity:0;
       visibility:hidden;
       transform:translateY(-5px);
@@ -205,7 +186,7 @@
       z-index:1000;
     }
 
-    .language-selector.open .language-dropdown{
+    .language-switcher.open .language-dropdown{
       opacity:1;
       visibility:visible;
       transform:translateY(0);
@@ -213,12 +194,10 @@
 
     .language-dropdown a{
       display:block;
-      padding:7px 10px;
-      border-radius:6px;
+      padding:8px 10px;
+      border-radius:7px;
       font-size:.875rem;
-      font-weight:600;
       color:var(--text-muted);
-      text-align:center;
     }
 
     .language-dropdown a:hover{
@@ -226,12 +205,18 @@
       color:var(--text);
     }
 
+    .language-dropdown .active-language{
+      color:var(--blue);
+      font-weight:600;
+    }
+
+    /* MOBILE MENU */
+
     .nav-toggle{
       display:none;
       background:none;
       border:none;
       padding:8px;
-      cursor:pointer;
     }
 
     .nav-toggle svg{
@@ -278,11 +263,13 @@
         font-size:.875rem;
       }
 
-      .language-selector{
-        margin-left:auto;
+      .language-switcher{
+        margin-right:4px;
       }
 
     }
+
+    /* MAIN */
 
     main{
       padding:90px 0;
@@ -307,6 +294,8 @@
       color:var(--text-muted);
       font-size:1.0625rem;
     }
+
+    /* FORM */
 
     .form-card{
       background:#fff;
@@ -415,63 +404,75 @@
         top:64px;
       }
 
-      .nav-cta{
-        gap:10px;
-      }
-
     }
 
   </style>
 
 </head>
 
+
 <body>
 
 <header id="siteHeader">
 
-  <div class="nav">
+  <div class="container nav">
 
-    <a href="/" class="brand">
+    <a href="/en/" class="brand">
       <strong>Pedro Silva</strong>
       <span>Technical SEO & AI Search Consultant</span>
     </a>
 
+
     <nav class="nav-links" id="navLinks">
 
-      <a href="/index.html#servicos">Serviços</a>
+      <a href="/en/#services">Services</a>
 
-      <a href="/index.html#processo">Como trabalho</a>
+      <a href="/en/#process">How I Work</a>
 
-      <a href="/index.html#ferramentas">Ferramentas</a>
+      <a href="/en/#tools">Tools</a>
 
-      <a href="/index.html#sobre">Sobre</a>
+      <a href="/en/#about">About</a>
 
-      <a href="/blog.html">Blog</a>
+      <a href="/en/blog.html">Blog</a>
 
-      <a href="/index.html#faq">FAQ</a>
+      <a href="/en/#faq">FAQ</a>
 
     </nav>
 
+
     <div class="nav-cta">
 
-      <!-- Language selector -->
 
-      <div class="language-selector" id="languageSelector">
+      <!-- LANGUAGE SWITCHER -->
+
+      <div class="language-switcher" id="languageSwitcher">
 
         <button
-          type="button"
           class="language-button"
           id="languageButton"
+          type="button"
+          aria-label="Change language"
           aria-expanded="false"
-          aria-haspopup="true"
         >
-          PT
+
+          EN
+
           <span class="language-arrow">▼</span>
+
         </button>
+
 
         <div class="language-dropdown">
 
-          <a href="/en/auditoria.html" lang="en">
+          <a href="/auditoria.html">
+            PT
+          </a>
+
+          <a
+            href="/en/audit.html"
+            class="active-language"
+            aria-current="page"
+          >
             EN
           </a>
 
@@ -479,14 +480,19 @@
 
       </div>
 
-      <a href="/index.html#contacto" class="btn btn-primary">
-        Contacto
+
+      <a
+        href="/en/#contact"
+        class="btn btn-primary"
+      >
+        Contact
       </a>
+
 
       <button
         class="nav-toggle"
         id="navToggle"
-        aria-label="Abrir menu"
+        aria-label="Open menu"
         aria-expanded="false"
       >
 
@@ -499,7 +505,9 @@
         >
 
           <line x1="3" y1="6" x2="21" y2="6"/>
+
           <line x1="3" y1="12" x2="21" y2="12"/>
+
           <line x1="3" y1="18" x2="21" y2="18"/>
 
         </svg>
@@ -517,16 +525,17 @@
 
   <div class="container">
 
+
     <div class="intro">
 
       <h1>
-        Solicite uma Consultoria SEO ou GEO
+        Request an SEO or GEO Consultation
       </h1>
 
       <p>
-        Solicite uma auditoria para identificar problemas técnicos,
-        oportunidades de otimização e fatores que podem estar a limitar
-        a sua visibilidade orgânica.
+        Request an audit to identify technical issues,
+        optimization opportunities and factors that may be
+        limiting your organic visibility.
       </p>
 
     </div>
@@ -534,22 +543,24 @@
 
     <div class="form-card">
 
+
       <form
         action="https://formspree.io/f/xoeanqpl"
         method="POST"
       >
 
+
         <div class="field">
 
-          <label for="nome">
-            Nome
+          <label for="name">
+            Name
           </label>
 
           <input
             type="text"
-            id="nome"
-            name="nome"
-            placeholder="O seu nome"
+            id="name"
+            name="name"
+            placeholder="Your name"
             required
           >
 
@@ -566,7 +577,7 @@
             type="email"
             id="email"
             name="email"
-            placeholder="nome@empresa.com"
+            placeholder="name@company.com"
             required
           >
 
@@ -583,7 +594,7 @@
             type="url"
             id="website"
             name="website"
-            placeholder="https://www.exemplo.com"
+            placeholder="https://www.example.com"
             required
           >
 
@@ -592,26 +603,26 @@
 
         <div class="field">
 
-          <label for="objetivo">
-            O que pretende melhorar?
+          <label for="objective">
+            What would you like to improve?
           </label>
 
           <select
-            id="objetivo"
-            name="objetivo"
+            id="objective"
+            name="objective"
             required
           >
 
             <option value="">
-              Selecione uma opção
+              Select an option
             </option>
 
-            <option value="SEO Técnico">
-              SEO Técnico
+            <option value="Technical SEO">
+              Technical SEO
             </option>
 
-            <option value="Indexação e rastreamento">
-              Indexação e rastreamento
+            <option value="Indexing and crawling">
+              Indexing and crawling
             </option>
 
             <option value="Core Web Vitals">
@@ -622,12 +633,12 @@
               AI Search / GEO
             </option>
 
-            <option value="Auditoria SEO completa">
-              Auditoria SEO completa
+            <option value="Full SEO audit">
+              Full SEO audit
             </option>
 
-            <option value="Outro">
-              Outro
+            <option value="Other">
+              Other
             </option>
 
           </select>
@@ -637,14 +648,14 @@
 
         <div class="field">
 
-          <label for="mensagem">
-            Conte-me um pouco sobre o seu projeto
+          <label for="message">
+            Tell me a little about your project
           </label>
 
           <textarea
-            id="mensagem"
-            name="mensagem"
-            placeholder="Quais são os principais desafios ou objetivos do seu website?"
+            id="message"
+            name="message"
+            placeholder="What are the main challenges or goals for your website?"
           ></textarea>
 
         </div>
@@ -654,15 +665,17 @@
           type="submit"
           class="submit-btn"
         >
-          Solicitar auditoria
+          Request an audit
         </button>
+
 
       </form>
 
 
       <div class="note">
-        Os seus dados serão utilizados apenas para responder ao seu pedido.
+        Your data will only be used to respond to your request.
       </div>
+
 
     </div>
 
@@ -673,21 +686,28 @@
 
 <footer>
 
-  © 2026 Pedro Silva. Todos os direitos reservados.
+  © 2026 Pedro Silva. All rights reserved.
 
 </footer>
 
 
 <script>
 
-  /* Mobile menu */
+  /* ================================
+     MOBILE MENU
+  ================================= */
 
-  const navToggle = document.getElementById('navToggle');
-  const navLinks = document.getElementById('navLinks');
+  const navToggle =
+    document.getElementById('navToggle');
+
+  const navLinks =
+    document.getElementById('navLinks');
+
 
   navToggle.addEventListener('click', () => {
 
-    const isOpen = navLinks.classList.toggle('open');
+    const isOpen =
+      navLinks.classList.toggle('open');
 
     navToggle.setAttribute(
       'aria-expanded',
@@ -697,26 +717,30 @@
   });
 
 
-  navLinks.querySelectorAll('a').forEach(link => {
+  navLinks
+    .querySelectorAll('a')
+    .forEach(link => {
 
-    link.addEventListener('click', () => {
+      link.addEventListener('click', () => {
 
-      navLinks.classList.remove('open');
+        navLinks.classList.remove('open');
 
-      navToggle.setAttribute(
-        'aria-expanded',
-        'false'
-      );
+        navToggle.setAttribute(
+          'aria-expanded',
+          'false'
+        );
+
+      });
 
     });
 
-  });
 
+  /* ================================
+     LANGUAGE DROPDOWN
+  ================================= */
 
-  /* Language selector */
-
-  const languageSelector =
-    document.getElementById('languageSelector');
+  const languageSwitcher =
+    document.getElementById('languageSwitcher');
 
   const languageButton =
     document.getElementById('languageButton');
@@ -727,7 +751,7 @@
     event.stopPropagation();
 
     const isOpen =
-      languageSelector.classList.toggle('open');
+      languageSwitcher.classList.toggle('open');
 
     languageButton.setAttribute(
       'aria-expanded',
@@ -739,9 +763,9 @@
 
   document.addEventListener('click', (event) => {
 
-    if (!languageSelector.contains(event.target)) {
+    if (!languageSwitcher.contains(event.target)) {
 
-      languageSelector.classList.remove('open');
+      languageSwitcher.classList.remove('open');
 
       languageButton.setAttribute(
         'aria-expanded',

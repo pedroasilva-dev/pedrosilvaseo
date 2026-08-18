@@ -1,22 +1,20 @@
 <!DOCTYPE html>
-<html lang="pt-PT">
+<html lang="en">
 
 <head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Blog de SEO e AI Search | Pedro Silva</title>
+<title>SEO & AI Search Blog | Pedro Silva</title>
 
-<meta name="description" content="Guias e artigos sobre SEO Técnico, AI Search, GEO, Google AI Overviews, ChatGPT Search, SEO Internacional, Core Web Vitals e otimização para motores de pesquisa.">
+<meta name="description" content="Guides and articles about Technical SEO, AI Search, GEO, Google AI Overviews, ChatGPT Search, International SEO, Core Web Vitals and search engine optimization.">
 
 <meta name="author" content="Pedro Silva">
 <meta name="robots" content="index, follow">
 
-<!-- Canonical -->
-<link rel="canonical" href="https://pedrosilvaseo.vercel.app/blog.html">
+<link rel="canonical" href="https://pedrosilvaseo.vercel.app/en/blog.html">
 
-<!-- Hreflang -->
 <link rel="alternate" hreflang="pt-PT" href="https://pedrosilvaseo.vercel.app/blog.html">
 <link rel="alternate" hreflang="en" href="https://pedrosilvaseo.vercel.app/en/blog.html">
 <link rel="alternate" hreflang="x-default" href="https://pedrosilvaseo.vercel.app/blog.html">
@@ -26,17 +24,18 @@
 <!-- Open Graph -->
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="Blog de SEO Técnico e AI Search | Pedro Silva">
-<meta property="og:description" content="Guias e estratégias sobre SEO Técnico, AI Search, GEO e pesquisa baseada em Inteligência Artificial.">
-<meta property="og:url" content="https://pedrosilvaseo.vercel.app/blog.html">
+<meta property="og:title" content="Technical SEO & AI Search Blog | Pedro Silva">
+<meta property="og:description" content="Guides and strategies about Technical SEO, AI Search, GEO and AI-powered search.">
+<meta property="og:url" content="https://pedrosilvaseo.vercel.app/en/blog.html">
 <meta property="og:image" content="https://pedrosilvaseo.vercel.app/og-image.jpg">
-<meta property="og:locale" content="pt_PT">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="pt_PT">
 
 <!-- Twitter -->
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Blog de SEO Técnico e AI Search | Pedro Silva">
-<meta name="twitter:description" content="Guias e estratégias sobre SEO Técnico, AI Search, GEO e pesquisa baseada em Inteligência Artificial.">
+<meta name="twitter:title" content="Technical SEO & AI Search Blog | Pedro Silva">
+<meta name="twitter:description" content="Guides and strategies about Technical SEO, AI Search, GEO and AI-powered search.">
 <meta name="twitter:image" content="https://pedrosilvaseo.vercel.app/og-image.jpg">
 
 <!-- Fonts -->
@@ -71,14 +70,14 @@ gtag('config', 'G-3B8KSEMLFP');
 {
   "@context": "https://schema.org",
   "@type": "Blog",
-  "name": "Blog de SEO Técnico e AI Search",
-  "description": "Guias e artigos sobre SEO Técnico, AI Search, GEO, SEO Internacional e pesquisa baseada em Inteligência Artificial.",
-  "url": "https://pedrosilvaseo.vercel.app/blog.html",
-  "inLanguage": "pt-PT",
+  "name": "Technical SEO & AI Search Blog",
+  "description": "Guides and articles about Technical SEO, AI Search, GEO, International SEO and AI-powered search.",
+  "url": "https://pedrosilvaseo.vercel.app/en/blog.html",
+  "inLanguage": "en",
   "author": {
     "@type": "Person",
     "name": "Pedro Silva",
-    "url": "https://pedrosilvaseo.vercel.app/"
+    "url": "https://pedrosilvaseo.vercel.app/en/"
   }
 }
 
@@ -337,6 +336,130 @@ section{
 }
 
 /* =========================
+   LANGUAGE SWITCHER
+========================= */
+
+.language-switcher{
+
+  position:relative;
+  display:flex;
+  align-items:center;
+
+}
+
+.language-button{
+
+  display:flex;
+  align-items:center;
+  gap:5px;
+
+  padding:7px 9px;
+
+  border:1px solid var(--border);
+  border-radius:8px;
+
+  background:#fff;
+  color:var(--text);
+
+  font-size:.8125rem;
+  font-weight:600;
+
+  transition:
+    background .2s var(--ease),
+    border-color .2s var(--ease);
+
+}
+
+.language-button:hover{
+
+  background:var(--bg-secondary);
+  border-color:#CBD5E1;
+
+}
+
+.language-button svg{
+
+  width:13px;
+  height:13px;
+
+  transition:transform .2s var(--ease);
+
+}
+
+.language-switcher.open .language-button svg{
+
+  transform:rotate(180deg);
+
+}
+
+.language-menu{
+
+  position:absolute;
+  top:calc(100% + 8px);
+  right:0;
+
+  min-width:80px;
+
+  background:#fff;
+
+  border:1px solid var(--border);
+  border-radius:10px;
+
+  box-shadow:var(--shadow-lg);
+
+  padding:6px;
+
+  opacity:0;
+  visibility:hidden;
+  transform:translateY(-5px);
+
+  transition:
+    opacity .2s var(--ease),
+    transform .2s var(--ease),
+    visibility .2s var(--ease);
+
+  z-index:200;
+
+}
+
+.language-switcher.open .language-menu{
+
+  opacity:1;
+  visibility:visible;
+  transform:none;
+
+}
+
+.language-menu a{
+
+  display:block;
+
+  padding:8px 10px;
+
+  border-radius:7px;
+
+  font-size:.8125rem;
+  font-weight:600;
+
+  color:var(--text-muted);
+
+}
+
+.language-menu a:hover{
+
+  background:var(--blue-tint);
+  color:var(--blue);
+
+}
+
+.language-menu a.active{
+
+  color:var(--blue);
+  background:var(--blue-tint);
+
+}
+
+/* =========================
    REVEAL
 ========================= */
 
@@ -450,7 +573,7 @@ header.scrolled{
 
   display:flex;
   align-items:center;
-  gap:36px;
+  gap:30px;
 
 }
 
@@ -473,141 +596,9 @@ header.scrolled{
 
   display:flex;
   align-items:center;
-  gap:16px;
+  gap:14px;
 
 }
-
-/* =========================
-   LANGUAGE SWITCHER
-========================= */
-
-.language-switcher{
-
-  position:relative;
-
-}
-
-.language-button{
-
-  display:flex;
-  align-items:center;
-  gap:6px;
-
-  padding:8px 10px;
-
-  border:1px solid transparent;
-  border-radius:8px;
-
-  background:transparent;
-
-  color:var(--text-muted);
-
-  font-size:.875rem;
-  font-weight:600;
-
-  transition:
-    color .2s var(--ease),
-    background .2s var(--ease),
-    border-color .2s var(--ease);
-
-}
-
-.language-button:hover{
-
-  color:var(--text);
-  background:#fff;
-  border-color:var(--border);
-
-}
-
-.language-button svg{
-
-  width:14px;
-  height:14px;
-
-  transition:transform .2s var(--ease);
-
-}
-
-.language-switcher.open .language-button svg{
-
-  transform:rotate(180deg);
-
-}
-
-.language-menu{
-
-  position:absolute;
-
-  top:calc(100% + 8px);
-  right:0;
-
-  min-width:70px;
-
-  padding:6px;
-
-  background:#fff;
-
-  border:1px solid var(--border);
-  border-radius:10px;
-
-  box-shadow:var(--shadow-lg);
-
-  opacity:0;
-  visibility:hidden;
-  transform:translateY(-5px);
-
-  transition:
-    opacity .2s var(--ease),
-    transform .2s var(--ease),
-    visibility .2s var(--ease);
-
-}
-
-.language-switcher.open .language-menu{
-
-  opacity:1;
-  visibility:visible;
-  transform:translateY(0);
-
-}
-
-.language-menu a{
-
-  display:block;
-
-  padding:8px 10px;
-
-  border-radius:7px;
-
-  font-size:.875rem;
-  font-weight:600;
-
-  color:var(--text-muted);
-
-  transition:
-    background .2s var(--ease),
-    color .2s var(--ease);
-
-}
-
-.language-menu a:hover{
-
-  background:var(--blue-tint);
-  color:var(--blue);
-
-}
-
-.language-menu a.active{
-
-  color:var(--blue);
-  background:var(--blue-tint);
-
-}
-
-/* =========================
-   MOBILE MENU
-========================= */
 
 .nav-toggle{
 
@@ -622,6 +613,16 @@ header.scrolled{
 
   width:22px;
   height:22px;
+
+}
+
+@media(max-width:1020px){
+
+  .nav-links{
+
+    gap:20px;
+
+  }
 
 }
 
@@ -682,7 +683,7 @@ header.scrolled{
 
   .language-switcher{
 
-    margin-left:auto;
+    margin-right:2px;
 
   }
 
@@ -1534,7 +1535,7 @@ footer{
 
   <div class="container nav">
 
-    <a href="/" class="brand">
+    <a href="/en/" class="brand">
 
       <strong>Pedro Silva</strong>
 
@@ -1546,34 +1547,34 @@ footer{
 
     <nav class="nav-links" id="navLinks">
 
-      <a href="/">
-        Início
+      <a href="/en/">
+        Home
       </a>
 
-      <a href="/#servicos">
-        Serviços
+      <a href="/en/#services">
+        Services
       </a>
 
-      <a href="/#processo">
-        Como trabalho
+      <a href="/en/#process">
+        How I work
       </a>
 
-      <a href="/#ferramentas">
-        Ferramentas
+      <a href="/en/#tools">
+        Tools
       </a>
 
-      <a href="/#sobre">
-        Sobre
+      <a href="/en/#about">
+        About
       </a>
 
       <a
-        href="/blog.html"
+        href="/en/blog.html"
         style="color:var(--text);"
       >
         Blog
       </a>
 
-      <a href="/#faq">
+      <a href="/en/#faq">
         FAQ
       </a>
 
@@ -1586,14 +1587,14 @@ footer{
       <div class="language-switcher" id="languageSwitcher">
 
         <button
-          type="button"
           class="language-button"
           id="languageButton"
-          aria-label="Selecionar idioma"
+          type="button"
+          aria-label="Change language"
           aria-expanded="false"
         >
 
-          PT
+          <span>EN</span>
 
           <svg
             viewBox="0 0 24 24"
@@ -1603,27 +1604,24 @@ footer{
             stroke-linecap="round"
             stroke-linejoin="round"
           >
+
             <polyline points="6 9 12 15 18 9"></polyline>
+
           </svg>
 
         </button>
 
-        <div
-          class="language-menu"
-          id="languageMenu"
-        >
+        <div class="language-menu">
 
           <a
             href="/blog.html"
-            class="active"
-            lang="pt-PT"
           >
             PT
           </a>
 
           <a
             href="/en/blog.html"
-            lang="en"
+            class="active"
           >
             EN
           </a>
@@ -1633,16 +1631,16 @@ footer{
       </div>
 
       <a
-        href="/#contacto"
+        href="/en/#contact"
         class="btn btn-primary"
       >
-        Contacto
+        Contact
       </a>
 
       <button
         class="nav-toggle"
         id="navToggle"
-        aria-label="Abrir menu"
+        aria-label="Open menu"
         aria-expanded="false"
         type="button"
       >
@@ -1686,13 +1684,13 @@ footer{
       </p>
 
       <h1>
-        SEO Técnico & AI Search
+        Technical SEO & AI Search
       </h1>
 
       <p>
-        Guias, análises e estratégias para aumentar a visibilidade
-        orgânica no Google e preparar websites para a nova geração
-        da pesquisa baseada em Inteligência Artificial.
+        Guides, analysis and strategies to increase organic
+        visibility on Google and prepare websites for the next
+        generation of AI-powered search.
       </p>
 
       <div class="blog-filters">
@@ -1702,7 +1700,7 @@ footer{
           data-filter="all"
           type="button"
         >
-          Todos
+          All
         </button>
 
         <button
@@ -1726,7 +1724,7 @@ footer{
           data-filter="technical"
           type="button"
         >
-          SEO Técnico
+          Technical SEO
         </button>
 
       </div>
@@ -1760,7 +1758,7 @@ footer{
         <div class="featured-slide">
 
           <a
-            href="/blog/google-ai-mode.html"
+            href="/en/blog/google-ai-mode.html"
             class="featured-card"
           >
 
@@ -1771,25 +1769,25 @@ footer{
               </span>
 
               <h2>
-                Google AI Mode: O que muda para o SEO
+                Google AI Mode: What Changes for SEO
               </h2>
 
               <p>
-                Uma análise sobre o novo paradigma de pesquisa
-                do Google, como funciona o AI Mode e o que
-                significa para a visibilidade orgânica dos websites.
+                An analysis of Google's new search paradigm,
+                how AI Mode works and what it means for the
+                organic visibility of websites.
               </p>
 
               <div class="featured-meta">
 
                 <span>
-                  8 min de leitura
+                  8 min read
                 </span>
 
                 <span>·</span>
 
                 <span>
-                  Guia completo
+                  Complete guide
                 </span>
 
               </div>
@@ -1849,7 +1847,7 @@ footer{
         <div class="featured-slide">
 
           <a
-            href="/blog/como-aparecer-nos-llms.html"
+            href="/en/blog/how-to-appear-in-llms.html"
             class="featured-card"
           >
 
@@ -1860,25 +1858,25 @@ footer{
               </span>
 
               <h2>
-                Como aparecer nos LLMs
+                How to Appear in LLMs
               </h2>
 
               <p>
-                Descubra como aumentar a probabilidade de o seu
-                website ser encontrado, compreendido e citado
-                por ChatGPT, Gemini e outros modelos de linguagem.
+                Discover how to increase the likelihood of your
+                website being found, understood and cited by
+                ChatGPT, Gemini and other large language models.
               </p>
 
               <div class="featured-meta">
 
                 <span>
-                  10 min de leitura
+                  10 min read
                 </span>
 
                 <span>·</span>
 
                 <span>
-                  Guia completo
+                  Complete guide
                 </span>
 
               </div>
@@ -1938,36 +1936,36 @@ footer{
         <div class="featured-slide">
 
           <a
-            href="/blog/o-que-e-technical-seo.html"
+            href="/en/blog/what-is-technical-seo.html"
             class="featured-card"
           >
 
             <div class="featured-content">
 
               <span class="category">
-                SEO Técnico
+                Technical SEO
               </span>
 
               <h2>
-                O Que é Technical SEO? Guia de SEO Técnico
+                What Is Technical SEO? A Technical SEO Guide
               </h2>
 
               <p>
-                Descubra o que é Technical SEO, porque é importante
-                para a visibilidade orgânica e quais os principais
-                elementos técnicos que devem ser otimizados num website.
+                Discover what Technical SEO is, why it matters
+                for organic visibility and which technical
+                elements should be optimized on a website.
               </p>
 
               <div class="featured-meta">
 
                 <span>
-                  9 min de leitura
+                  9 min read
                 </span>
 
                 <span>·</span>
 
                 <span>
-                  Guia completo
+                  Complete guide
                 </span>
 
               </div>
@@ -2027,7 +2025,7 @@ footer{
         <div class="featured-slide">
 
           <a
-            href="/blog/o-que-e-geo.html"
+            href="/en/blog/what-is-geo.html"
             class="featured-card"
           >
 
@@ -2038,25 +2036,25 @@ footer{
               </span>
 
               <h2>
-                O Que é GEO? Guia de Generative Engine Optimization
+                What Is GEO? A Guide to Generative Engine Optimization
               </h2>
 
               <p>
-                Descubra o que é GEO, como funciona a otimização
-                para motores de resposta generativos e como aumentar
-                a visibilidade de um website em ChatGPT, Google AI e Gemini.
+                Discover what GEO is, how optimization for generative
+                answer engines works and how to increase website
+                visibility across ChatGPT, Google AI and Gemini.
               </p>
 
               <div class="featured-meta">
 
                 <span>
-                  8 min de leitura
+                  8 min read
                 </span>
 
                 <span>·</span>
 
                 <span>
-                  Guia completo
+                  Complete guide
                 </span>
 
               </div>
@@ -2120,7 +2118,7 @@ footer{
         <button
           class="slider-arrow"
           id="sliderPrev"
-          aria-label="Artigo anterior"
+          aria-label="Previous article"
           type="button"
         >
 
@@ -2144,28 +2142,28 @@ footer{
           <button
             class="slider-dot active"
             data-slide="0"
-            aria-label="Ir para o artigo Google AI Mode"
+            aria-label="Go to Google AI Mode article"
             type="button"
           ></button>
 
           <button
             class="slider-dot"
             data-slide="1"
-            aria-label="Ir para o artigo Como aparecer nos LLMs"
+            aria-label="Go to How to Appear in LLMs article"
             type="button"
           ></button>
 
           <button
             class="slider-dot"
             data-slide="2"
-            aria-label="Ir para o artigo O Que é Technical SEO"
+            aria-label="Go to Technical SEO article"
             type="button"
           ></button>
 
           <button
             class="slider-dot"
             data-slide="3"
-            aria-label="Ir para o artigo O Que é GEO"
+            aria-label="Go to GEO article"
             type="button"
           ></button>
 
@@ -2174,7 +2172,7 @@ footer{
         <button
           class="slider-arrow"
           id="sliderNext"
-          aria-label="Próximo artigo"
+          aria-label="Next article"
           type="button"
         >
 
@@ -2214,11 +2212,11 @@ footer{
       <div>
 
         <p class="eyebrow">
-          Artigos
+          Articles
         </p>
 
         <h2>
-          Conteúdos recentes
+          Recent content
         </h2>
 
       </div>
@@ -2242,26 +2240,26 @@ footer{
         </span>
 
         <h3>
-          Google AI Mode: O que muda para o SEO
+          Google AI Mode: What Changes for SEO
         </h3>
 
         <p>
-          Uma análise sobre o novo paradigma de pesquisa do Google
-          e o que significa para a visibilidade orgânica dos websites.
+          An analysis of Google's new search paradigm and what
+          it means for the organic visibility of websites.
         </p>
 
         <div class="article-meta">
 
           <span>
-            8 min de leitura
+            8 min read
           </span>
 
           <a
-            href="/blog/google-ai-mode.html"
+            href="/en/blog/google-ai-mode.html"
             class="read-more"
           >
 
-            Ler artigo
+            Read article
 
             <svg
               viewBox="0 0 24 24"
@@ -2271,9 +2269,16 @@ footer{
               stroke-linecap="round"
             >
 
-              <line x1="5" y1="12" x2="19" y2="12"/>
+              <line
+                x1="5"
+                y1="12"
+                x2="19"
+                y2="12"
+              />
 
-              <polyline points="12 5 19 12 12 19"/>
+              <polyline
+                points="12 5 19 12 12 19"
+              />
 
             </svg>
 
@@ -2295,26 +2300,27 @@ footer{
         </span>
 
         <h3>
-          Como aparecer nos LLMs
+          How to Appear in LLMs
         </h3>
 
         <p>
-          Guia prático para compreender como aumentar a visibilidade
-          de um website em ChatGPT, Gemini e outros modelos de linguagem.
+          A practical guide to understanding how to increase
+          website visibility across ChatGPT, Gemini and other
+          large language models.
         </p>
 
         <div class="article-meta">
 
           <span>
-            10 min de leitura
+            10 min read
           </span>
 
           <a
-            href="/blog/como-aparecer-nos-llms.html"
+            href="/en/blog/how-to-appear-in-llms.html"
             class="read-more"
           >
 
-            Ler artigo
+            Read article
 
             <svg
               viewBox="0 0 24 24"
@@ -2324,9 +2330,16 @@ footer{
               stroke-linecap="round"
             >
 
-              <line x1="5" y1="12" x2="19" y2="12"/>
+              <line
+                x1="5"
+                y1="12"
+                x2="19"
+                y2="12"
+              />
 
-              <polyline points="12 5 19 12 12 19"/>
+              <polyline
+                points="12 5 19 12 12 19"
+              />
 
             </svg>
 
@@ -2344,31 +2357,31 @@ footer{
       >
 
         <span class="category">
-          SEO Técnico
+          Technical SEO
         </span>
 
         <h3>
-          O Que é Technical SEO? Guia de SEO Técnico
+          What Is Technical SEO? A Technical SEO Guide
         </h3>
 
         <p>
-          Descubra o que é Technical SEO, porque é importante
-          para a visibilidade orgânica e quais os principais
-          elementos técnicos que devem ser otimizados num website.
+          Discover what Technical SEO is, why it matters for
+          organic visibility and which technical elements should
+          be optimized on a website.
         </p>
 
         <div class="article-meta">
 
           <span>
-            9 min de leitura
+            9 min read
           </span>
 
           <a
-            href="/blog/o-que-e-technical-seo.html"
+            href="/en/blog/what-is-technical-seo.html"
             class="read-more"
           >
 
-            Ler artigo
+            Read article
 
             <svg
               viewBox="0 0 24 24"
@@ -2378,9 +2391,16 @@ footer{
               stroke-linecap="round"
             >
 
-              <line x1="5" y1="12" x2="19" y2="12"/>
+              <line
+                x1="5"
+                y1="12"
+                x2="19"
+                y2="12"
+              />
 
-              <polyline points="12 5 19 12 12 19"/>
+              <polyline
+                points="12 5 19 12 12 19"
+              />
 
             </svg>
 
@@ -2402,27 +2422,27 @@ footer{
         </span>
 
         <h3>
-          O Que é GEO? Guia de Generative Engine Optimization
+          What Is GEO? A Guide to Generative Engine Optimization
         </h3>
 
         <p>
-          Descubra o que é GEO, como funciona a otimização para
-          motores de resposta generativos e como aumentar a
-          visibilidade de um website em ferramentas de IA.
+          Discover what GEO is, how optimization for generative
+          answer engines works and how to increase website
+          visibility across AI platforms.
         </p>
 
         <div class="article-meta">
 
           <span>
-            8 min de leitura
+            8 min read
           </span>
 
           <a
-            href="/blog/o-que-e-geo.html"
+            href="/en/blog/what-is-geo.html"
             class="read-more"
           >
 
-            Ler artigo
+            Read article
 
             <svg
               viewBox="0 0 24 24"
@@ -2432,9 +2452,16 @@ footer{
               stroke-linecap="round"
             >
 
-              <line x1="5" y1="12" x2="19" y2="12"/>
+              <line
+                x1="5"
+                y1="12"
+                x2="19"
+                y2="12"
+              />
 
-              <polyline points="12 5 19 12 12 19"/>
+              <polyline
+                points="12 5 19 12 12 19"
+              />
 
             </svg>
 
@@ -2461,21 +2488,23 @@ footer{
     <div class="section-head center reveal">
 
       <p class="eyebrow">
-        Áreas
+        Topics
       </p>
 
       <h2>
-        Explorar por tema
+        Explore by topic
       </h2>
 
       <p>
-        Conteúdos organizados pelas principais áreas
-        de especialização.
+        Content organized around the main areas
+        of specialization.
       </p>
 
     </div>
 
     <div class="topics-grid reveal-group">
+
+      <!-- TOPIC 1 -->
 
       <div class="topic-card reveal">
 
@@ -2484,16 +2513,18 @@ footer{
         </span>
 
         <h3>
-          Pesquisa com Inteligência Artificial
+          AI-Powered Search
         </h3>
 
         <p>
           AI Search, Google AI Overviews, AI Mode,
-          ChatGPT Search e otimização para motores
-          generativos.
+          ChatGPT Search and optimization for
+          generative engines.
         </p>
 
       </div>
+
+      <!-- TOPIC 2 -->
 
       <div class="topic-card reveal">
 
@@ -2506,26 +2537,28 @@ footer{
         </h3>
 
         <p>
-          GEO, visibilidade em motores generativos,
-          respostas de IA, entidades, autoridade
-          e otimização de conteúdo para sistemas de IA.
+          GEO, visibility in generative engines,
+          AI answers, entities, authority and
+          content optimization for AI systems.
         </p>
 
       </div>
 
+      <!-- TOPIC 3 -->
+
       <div class="topic-card reveal">
 
         <span class="category">
-          SEO Técnico
+          Technical SEO
         </span>
 
         <h3>
-          Fundamentos técnicos
+          Technical foundations
         </h3>
 
         <p>
-          Crawling, indexação, Core Web Vitals, Schema,
-          JavaScript SEO, canonicals, robots.txt e sitemaps.
+          Crawling, indexing, Core Web Vitals, Schema,
+          JavaScript SEO, canonicals, robots.txt and sitemaps.
         </p>
 
       </div>
@@ -2547,22 +2580,22 @@ footer{
     <div class="cta-final reveal">
 
       <h2>
-        O seu website está preparado para a próxima geração da pesquisa?
+        Is your website ready for the next generation of search?
       </h2>
 
       <p>
-        Se pretende melhorar a visibilidade orgânica do seu website,
-        podemos analisar as principais oportunidades técnicas
-        e definir um plano de ação.
+        If you want to improve your website's organic visibility,
+        we can identify the main technical opportunities
+        and define an actionable strategy.
       </p>
 
       <div class="btn-group">
 
         <a
-          href="/auditoria.html"
+          href="/en/audit.html"
           class="btn btn-primary"
         >
-          Solicitar uma auditoria
+          Request an audit
         </a>
 
         <a
@@ -2571,7 +2604,7 @@ footer{
           rel="noopener noreferrer"
           class="btn btn-secondary"
         >
-          Agendar Reunião
+          Book a meeting
         </a>
 
       </div>
@@ -2653,27 +2686,27 @@ footer{
 
       <div class="footer-links">
 
-        <a href="/">
-          Início
+        <a href="/en/">
+          Home
         </a>
 
-        <a href="/#servicos">
-          Serviços
+        <a href="/en/#services">
+          Services
         </a>
 
-        <a href="/#processo">
-          Como trabalho
+        <a href="/en/#process">
+          How I work
         </a>
 
-        <a href="/blog.html">
+        <a href="/en/blog.html">
           Blog
         </a>
 
-        <a href="/#sobre">
-          Sobre
+        <a href="/en/#about">
+          About
         </a>
 
-        <a href="/#faq">
+        <a href="/en/#faq">
           FAQ
         </a>
 
@@ -2682,7 +2715,7 @@ footer{
     </div>
 
     <p class="footer-copy">
-      © 2026 Pedro Silva. Todos os direitos reservados.
+      © 2026 Pedro Silva. All rights reserved.
     </p>
 
   </div>
